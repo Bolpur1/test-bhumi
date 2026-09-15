@@ -31,6 +31,33 @@
 </div>
 <div class="hero-card"><div class="house">⌂</div><h2>বিশ্বস্ত জমি সহায়তা</h2><p>নথিপত্র, রেজিস্ট্রেশন, রেকর্ড ও সম্পত্তি সংক্রান্ত কাজ ধাপে ধাপে বুঝে এগিয়ে যেতে সহায়তা।</p><div class="tags"><i>সহজ</i><i>স্বচ্ছ</i><i>পেশাদার</i></div></div>
 </div>
+  <section id="query" class="query-section"><div class="container query-grid"><div><small>অনলাইন কুয়েরি</small><h2>আপনার জমির বিষয়টি <span>জানান</span></h2><p>ফর্মটি পূরণ করে পাঠালে তথ্যগুলি WhatsApp message হিসেবে সরাসরি আপনার WhatsApp নম্বরে যাবে।</p></div>
+<form id="landQueryForm" class="query-form"><div class="form-row"><label>নাম<input name="name" required placeholder="আপনার নাম"></label><label>মোবাইল<input name="mobile" required type="tel" placeholder="মোবাইল নম্বর"></label></div>
+<label>পরিষেবা<select name="service" required><option value="">নির্বাচন করুন</option><option>জমি রেজিস্ট্রেশন</option><option>ভূমি রেকর্ড সহায়তা</option><option>নামজারি / মিউটেশন</option><option>দলিল সংক্রান্ত সহায়তা</option><option>জমি কেনা-বেচা</option><option>সম্পত্তি যাচাই</option><option>অন্যান্য</option></select></label>
+<div class="form-row"><label>জেলা<input name="district" placeholder="যেমন: বীরভূম"></label><label>মৌজা<input name="mouza" placeholder="মৌজার নাম"></label></div>
+<div class="form-row"><label>দাগ নম্বর<input name="dag" placeholder="দাগ নম্বর"></label><label>খতিয়ান নম্বর<input name="khatian" placeholder="খতিয়ান নম্বর"></label></div>
+<label>বিস্তারিত<textarea name="details" required rows="5" placeholder="আপনার বিষয়টি লিখুন..."></textarea></label>
+<button class="btn query-submit" type="submit">WhatsApp-এ কুয়েরি পাঠান →</button><small class="form-note">নিচের script.js-এ আপনার WhatsApp নম্বর বসাতে হবে।</small></form></div></section>
+
+
+
+
+<script>
+const BB_CONFIG={whatsapp:"919XXXXXXXXX"};
+document.addEventListener("DOMContentLoaded",()=>{
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href="https://wa.me/"+BB_CONFIG.whatsapp+"?text="+encodeURIComponent("নমস্কার ভূমি বন্ধু, আমার জমি/সম্পত্তি সংক্রান্ত বিষয়ে সহায়তা প্রয়োজন।");a.target="_blank";});
+const m=document.querySelector(".menu"),n=document.querySelector("nav");if(m)m.onclick=()=>n.classList.toggle("open");
+const f=document.getElementById("landQueryForm");if(f)f.onsubmit=e=>{e.preventDefault();let d=new FormData(f),mob=String(d.get("mobile")||"").replace(/\D/g,"");if(mob.length<10){alert("দয়া করে সঠিক মোবাইল নম্বর দিন।");return;}let t="*ভূমি বন্ধু — নতুন কুয়েরি*\n━━━━━━━━━━━━━━\n*নাম:* "+d.get("name")+"\n*মোবাইল:* "+d.get("mobile")+"\n*পরিষেবা:* "+d.get("service")+"\n*জেলা:* "+(d.get("district")||"দেওয়া হয়নি")+"\n*মৌজা:* "+(d.get("mouza")||"দেওয়া হয়নি")+"\n*দাগ:* "+(d.get("dag")||"দেওয়া হয়নি")+"\n*খতিয়ান:* "+(d.get("khatian")||"দেওয়া হয়নি")+"\n\n*বিস্তারিত:*\n"+d.get("details");window.open("https://wa.me/"+BB_CONFIG.whatsapp+"?text="+encodeURIComponent(t),"_blank");};
+const box=document.getElementById("galleryLightbox"),im=document.getElementById("lightboxImage"),ti=document.getElementById("lightboxTitle");document.querySelectorAll(".gallery-item").forEach(x=>x.onclick=()=>{im.src=x.dataset.image;ti.textContent=x.dataset.title;box.classList.add("open")});document.querySelector(".gallery-close").onclick=()=>box.classList.remove("open");box.onclick=e=>{if(e.target===box)box.classList.remove("open")};
+});
+</script>
+
+
+
+
+
+
+
 </section>
 
 <section id="services"><div class="container">
