@@ -1,123 +1,238 @@
+```html
 <!DOCTYPE html>
-<html lang="bn">
-
+<html lang="en">
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Bhumi Bandhu | Land Registration & Property Assistance</title>
 
     <meta name="description"
-          content="ভূমি বন্ধু - জমি ও সম্পত্তি সংক্রান্ত সহায়তা, রেজিস্ট্রেশন, দলিল, রেকর্ড, মিউটেশন ও সম্পত্তি যাচাই।">
+          content="Bhumi Bandhu provides land registration, land records, mutation, deed and property assistance services.">
 
     <meta name="keywords"
-          content="Bhumi Bandhu, ভূমি বন্ধু, জমি রেজিস্ট্রেশন, জমির রেকর্ড, দলিল, মিউটেশন, সম্পত্তি যাচাই">
-
-    <meta name="author"
-          content="Bhumi Bandhu">
-
-    <title>ভূমি বন্ধু | জমি ও সম্পত্তি সংক্রান্ত সহায়তা</title>
+          content="Bhumi Bandhu, land registration, land records, mutation, property assistance, West Bengal">
 
     <link rel="stylesheet" href="style.css">
 
-</head>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
 
 <body>
 
+<!-- =========================
+     HEADER / NAVBAR
+========================= -->
 
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
+<header class="header" id="header">
 
-<header class="site-header">
+    <div class="container nav-container">
 
-    <div class="container nav-wrap">
+        <a href="#home" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-house"></i>
+            </span>
 
-        <a href="#home"
-           class="brand"
-           aria-label="ভূমি বন্ধু Home">
-
-            <img src="logo.png"
-                 alt="ভূমি বন্ধু Logo">
-
+            <span class="logo-text">
+                <strong>Bhumi</strong>
+                <span>Bandhu</span>
+            </span>
         </a>
 
+        <nav class="navbar" id="navbar">
 
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="মেনু খুলুন"
-            aria-expanded="false">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#process" class="nav-link">Process</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#contact" class="nav-link">Contact</a>
 
-            ☰
-
-        </button>
-
-
-        <nav class="nav"
-             aria-label="প্রধান নেভিগেশন">
-
-            <a href="#home">হোম</a>
-
-            <a href="#services">পরিষেবা</a>
-
-            <a href="#about">আমাদের সম্পর্কে</a>
-
-            <a href="#why">কেন ভূমি বন্ধু</a>
-
-            <a href="#process">কীভাবে কাজ করে</a>
-
-            <a href="#gallery">গ্যালারি</a>
-
-            <a href="#query">কুয়েরি</a>
-
-            <a href="#contact">যোগাযোগ</a>
-
-            <a href="#"
-               class="nav-wa"
-               data-whatsapp>
-                WhatsApp
+            <a href="#enquiry" class="nav-cta">
+                Get Assistance
             </a>
 
         </nav>
+
+        <div class="nav-actions">
+
+            <button class="theme-toggle" id="themeToggle"
+                    aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
 
     </div>
 
 </header>
 
 
+<!-- =========================
+     HERO SECTION
+========================= -->
 
-<!-- =====================================================
-     HERO
-     ===================================================== -->
+<main>
 
-<main id="home">
+<section class="hero" id="home">
 
-<section class="hero">
+    <div class="hero-background-shape shape-one"></div>
+    <div class="hero-background-shape shape-two"></div>
 
-    <div class="hero-art">
+    <div class="container hero-container">
 
-        <div class="sun"></div>
+        <div class="hero-content">
 
-        <div class="hill hill-a"></div>
+            <div class="hero-badge">
+                <i class="fa-solid fa-circle-check"></i>
+                Your Trusted Land Assistance Partner
+            </div>
 
-        <div class="hill hill-b"></div>
+            <h1>
+                Making Land & Property
+                <span>Services Simpler.</span>
+            </h1>
 
-        <div class="field f1"></div>
+            <p>
+                Get professional assistance with land registration,
+                land records, mutation, deed preparation, property
+                documentation and related land matters.
+            </p>
 
-        <div class="field f2"></div>
+            <div class="hero-buttons">
+
+                <a href="#enquiry" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Get Assistance
+                </a>
+
+                <a href="#services" class="btn btn-outline">
+                    Explore Services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="hero-trust">
+
+                <div class="trust-item">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    <span>Document Guidance</span>
+                </div>
+
+                <div class="trust-item">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Personal Assistance</span>
+                </div>
+
+                <div class="trust-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Transparent Process</span>
+                </div>
+
+            </div>
+
+        </div>
 
 
-        <div class="house">
+        <div class="hero-visual">
 
-            <div class="roof"></div>
+            <div class="hero-card-main">
 
-            <div class="home-body">
+                <div class="hero-card-header">
 
-                <span></span>
-                <span></span>
+                    <div class="hero-card-icon">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+
+                    <div>
+                        <span>Land Services</span>
+                        <strong>Bhumi Bandhu</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="land-document">
+
+                    <div class="document-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="document-line large"></div>
+                    <div class="document-line"></div>
+                    <div class="document-line short"></div>
+
+                    <div class="document-grid">
+
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </div>
+
+                    <div class="document-line"></div>
+                    <div class="document-line medium"></div>
+
+                </div>
+
+
+                <div class="verified-card">
+
+                    <div class="verified-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>Document Assistance</strong>
+                        <span>Step-by-step guidance</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-one">
+
+                <div class="floating-icon">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+
+                <div>
+                    <strong>Registration</strong>
+                    <span>Assistance</span>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-two">
+
+                <div class="floating-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+
+                <div>
+                    <strong>Land Records</strong>
+                    <span>Support</span>
+                </div>
 
             </div>
 
@@ -125,209 +240,81 @@
 
     </div>
 
-
-    <div class="container hero-content">
-
-        <p class="eyebrow">
-            জমি ও সম্পত্তি সংক্রান্ত সহায়তা
-        </p>
-
-
-        <h1>
-
-            আপনার জমির
-
-            <span>বিশ্বস্ত সহায়ক</span>
-
-        </h1>
-
-
-        <p class="hero-copy">
-
-            জমি রেজিস্ট্রেশন, দলিল, রেকর্ড, মিউটেশন,
-            সম্পত্তি যাচাই এবং জমি কেনাবেচা সংক্রান্ত
-            বিভিন্ন কাজে সহজ ও নির্ভরযোগ্য সহায়তা।
-
-        </p>
-
-
-        <div class="hero-actions">
-
-            <a href="#query"
-               class="btn btn-primary">
-
-                কুয়েরি করুন →
-
-            </a>
-
-
-            <a href="#services"
-               class="btn btn-outline">
-
-                আমাদের পরিষেবা
-
-            </a>
-
-        </div>
-
-
-        <p class="trust-line">
-
-            <span>✓</span>
-
-            স্বচ্ছতা • দায়িত্বশীলতা • সহযোগিতা
-
-        </p>
-
-    </div>
-
 </section>
 
 
+<!-- =========================
+     QUICK SERVICES
+========================= -->
 
-<!-- =====================================================
-     SERVICES
-     ===================================================== -->
-
-<section class="section services"
-         id="services">
+<section class="quick-services">
 
     <div class="container">
 
-        <div class="section-head">
+        <div class="quick-services-grid">
 
-            <p class="eyebrow green">
-                আমাদের পরিষেবা
-            </p>
+            <a href="#services" class="quick-item">
 
-            <h2>
-                জমি ও সম্পত্তির কাজে এক জায়গায় সহায়তা
-            </h2>
+                <span>
+                    <i class="fa-solid fa-file-signature"></i>
+                </span>
 
-            <p>
-                আপনার প্রয়োজন অনুযায়ী জমি ও সম্পত্তি
-                সংক্রান্ত বিভিন্ন কাজে সহযোগিতা।
-            </p>
-
-        </div>
-
-
-        <div class="service-grid">
-
-
-            <div class="card service-card">
-
-                <div class="icon">
-                    01
+                <div>
+                    <strong>Registration</strong>
+                    <small>Document assistance</small>
                 </div>
 
-                <h3>
-                    জমি রেজিস্ট্রেশন
-                </h3>
+                <i class="fa-solid fa-arrow-right arrow"></i>
 
-                <p>
-                    জমি ক্রয়-বিক্রয় এবং রেজিস্ট্রেশন
-                    সংক্রান্ত প্রয়োজনীয় কাজ ও প্রক্রিয়া
-                    সম্পর্কে সহায়তা।
-                </p>
-
-            </div>
+            </a>
 
 
+            <a href="#services" class="quick-item">
 
-            <div class="card service-card">
+                <span>
+                    <i class="fa-solid fa-map"></i>
+                </span>
 
-                <div class="icon blue">
-                    02
+                <div>
+                    <strong>Land Records</strong>
+                    <small>Record related support</small>
                 </div>
 
-                <h3>
-                    দলিল সংক্রান্ত সহায়তা
-                </h3>
+                <i class="fa-solid fa-arrow-right arrow"></i>
 
-                <p>
-                    জমির দলিল, প্রয়োজনীয় কাগজপত্র এবং
-                    সংশ্লিষ্ট তথ্য সম্পর্কে সহায়তা।
-                </p>
-
-            </div>
+            </a>
 
 
+            <a href="#services" class="quick-item">
 
-            <div class="card service-card">
+                <span>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </span>
 
-                <div class="icon">
-                    03
+                <div>
+                    <strong>Mutation</strong>
+                    <small>Application guidance</small>
                 </div>
 
-                <h3>
-                    ভূমি রেকর্ড
-                </h3>
+                <i class="fa-solid fa-arrow-right arrow"></i>
 
-                <p>
-                    খতিয়ান, দাগ, মৌজা এবং জমির রেকর্ড
-                    সংক্রান্ত তথ্য খোঁজা ও বোঝার ক্ষেত্রে
-                    সহযোগিতা।
-                </p>
-
-            </div>
+            </a>
 
 
+            <a href="#enquiry" class="quick-item">
 
-            <div class="card service-card">
+                <span>
+                    <i class="fa-solid fa-comments"></i>
+                </span>
 
-                <div class="icon blue">
-                    04
+                <div>
+                    <strong>Ask Us</strong>
+                    <small>Send your enquiry</small>
                 </div>
 
-                <h3>
-                    মিউটেশন
-                </h3>
+                <i class="fa-solid fa-arrow-right arrow"></i>
 
-                <p>
-                    জমির নামজারি ও মিউটেশন সংক্রান্ত
-                    প্রক্রিয়া সম্পর্কে প্রয়োজনীয় সহায়তা।
-                </p>
-
-            </div>
-
-
-
-            <div class="card service-card">
-
-                <div class="icon">
-                    05
-                </div>
-
-                <h3>
-                    সম্পত্তি যাচাই
-                </h3>
-
-                <p>
-                    জমি বা সম্পত্তি সংক্রান্ত তথ্য ও
-                    নথিপত্র যাচাইয়ের প্রাথমিক সহায়তা।
-                </p>
-
-            </div>
-
-
-
-            <div class="card service-card">
-
-                <div class="icon blue">
-                    06
-                </div>
-
-                <h3>
-                    জমি কেনাবেচা সহায়তা
-                </h3>
-
-                <p>
-                    জমি কেনা বা বিক্রির আগে প্রয়োজনীয়
-                    তথ্য ও নথিপত্র সম্পর্কে সহায়তা।
-                </p>
-
-            </div>
+            </a>
 
         </div>
 
@@ -336,91 +323,483 @@
 </section>
 
 
+<!-- =========================
+     SERVICES SECTION
+========================= -->
 
-<!-- =====================================================
-     ABOUT
-     ===================================================== -->
+<section class="section services-section" id="services">
 
-<section class="section"
-         id="about">
+    <div class="container">
 
-    <div class="container two-col">
+        <div class="section-heading">
 
+            <span class="section-label">
+                OUR SERVICES
+            </span>
+
+            <h2>
+                Land & Property
+                <span>Assistance Services</span>
+            </h2>
+
+            <p>
+                We help you understand and navigate different
+                land and property related processes with practical
+                documentation guidance.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <!-- Service 1 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+
+                <div class="service-number">01</div>
+
+                <h3>Land Registration</h3>
+
+                <p>
+                    Assistance and guidance related to land and
+                    property registration documentation.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Service 2 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+
+                <div class="service-number">02</div>
+
+                <h3>Land Records</h3>
+
+                <p>
+                    Assistance with understanding and obtaining
+                    relevant land record information and documents.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Service 3 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+
+                <div class="service-number">03</div>
+
+                <h3>Mutation Assistance</h3>
+
+                <p>
+                    Guidance regarding mutation applications and
+                    related land record processes.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Service 4 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div class="service-number">04</div>
+
+                <h3>Deed Assistance</h3>
+
+                <p>
+                    Assistance with understanding property deed
+                    requirements and documentation.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Service 5 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="service-number">05</div>
+
+                <h3>Property Verification</h3>
+
+                <p>
+                    Preliminary assistance for checking property
+                    documents and relevant information.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Service 6 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+
+                <div class="service-number">06</div>
+
+                <h3>Land Sale & Purchase</h3>
+
+                <p>
+                    Documentation and process guidance for land
+                    buying and selling related matters.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Service 7 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+
+                <div class="service-number">07</div>
+
+                <h3>Land Tax / Khajna</h3>
+
+                <p>
+                    Assistance with understanding land revenue,
+                    tax and related documentation.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Service 8 -->
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <div class="service-number">08</div>
+
+                <h3>Office Related Assistance</h3>
+
+                <p>
+                    Guidance regarding relevant land and
+                    registration office procedures.
+                </p>
+
+                <a href="#enquiry" class="service-link">
+                    Get Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT SECTION
+========================= -->
+
+<section class="section about-section" id="about">
+
+    <div class="container about-container">
 
         <div class="about-visual">
 
-            <div class="document-sheet">
+            <div class="about-image-card">
 
-                <div class="doc-top">
-
-                    <span>
-                        LAND RECORD
-                    </span>
-
-                    <b>
-                        ✓ VERIFIED
-                    </b>
-
+                <div class="about-house-icon">
+                    <i class="fa-solid fa-house-chimney"></i>
                 </div>
 
+                <div class="about-circle circle-one"></div>
+                <div class="about-circle circle-two"></div>
 
-                <div class="doc-lines"></div>
+                <div class="about-document-card">
 
-                <div class="doc-lines short"></div>
+                    <i class="fa-solid fa-file-circle-check"></i>
 
-
-                <div class="map-box">
-
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                    <div>
+                        <strong>Land Documentation</strong>
+                        <span>Guidance & Assistance</span>
+                    </div>
 
                 </div>
-
-
-                <div class="doc-lines"></div>
-
-                <div class="doc-lines short"></div>
 
             </div>
-
-
-            <div class="pen"></div>
 
         </div>
 
 
+        <div class="about-content">
 
-        <div>
-
-            <p class="eyebrow green">
-                ভূমি বন্ধু সম্পর্কে
-            </p>
+            <span class="section-label">
+                ABOUT BHUMI BANDHU
+            </span>
 
             <h2>
-                জমির কাজকে সহজ ও পরিষ্কার করার লক্ষ্য
+                Your Local Partner for
+                <span>Land Matters</span>
             </h2>
 
             <p>
-                ভূমি বন্ধু জমি ও সম্পত্তি সংক্রান্ত
-                বিভিন্ন কাজে সাধারণ মানুষকে প্রয়োজনীয়
-                তথ্য, প্রক্রিয়া বোঝা এবং কাজের ক্ষেত্রে
-                সহযোগিতা করার উদ্দেশ্যে তৈরি।
+                Land and property related work can involve multiple
+                documents, applications and procedures. Bhumi Bandhu
+                aims to make these processes easier to understand
+                through organized assistance and documentation guidance.
             </p>
 
             <p>
-                জমির রেকর্ড, দলিল, রেজিস্ট্রেশন,
-                মিউটেশন এবং সম্পত্তি যাচাইয়ের মতো
-                বিষয়ে সঠিক তথ্য ও প্রয়োজনীয়
-                সহায়তা পাওয়াই আমাদের লক্ষ্য।
+                Whether you need help with registration, land records,
+                mutation, deeds or land buying and selling related
+                documentation, our goal is to provide a simple and
+                transparent experience.
             </p>
 
 
-            <div class="mini-note">
+            <div class="about-features">
 
-                গুরুত্বপূর্ণ জমি সংক্রান্ত সিদ্ধান্ত নেওয়ার
-                আগে প্রয়োজনীয় নথি ও তথ্য যাচাই করুন।
+                <div class="about-feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        <strong>Clear Guidance</strong>
+                        <span>Understand the process step by step.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        <strong>Document Support</strong>
+                        <span>Guidance for required documentation.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        <strong>Transparent Communication</strong>
+                        <span>Clear information about your request.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+                        <strong>Customer Focused</strong>
+                        <span>Assistance based on your requirement.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="#enquiry" class="btn btn-primary">
+                Talk to Bhumi Bandhu
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS SECTION
+========================= -->
+
+<section class="section process-section" id="process">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Simple Process,
+                <span>Clear Assistance</span>
+            </h2>
+
+            <p>
+                Getting started is simple. Tell us what you need
+                and we will guide you through the next steps.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+
+                <h3>Send Enquiry</h3>
+
+                <p>
+                    Tell us about your land or property related requirement.
+                </p>
+
+            </div>
+
+
+            <div class="process-connector">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+
+                <h3>Document Discussion</h3>
+
+                <p>
+                    We discuss the relevant documents and requirements.
+                </p>
+
+            </div>
+
+
+            <div class="process-connector">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <h3>Process Guidance</h3>
+
+                <p>
+                    Receive guidance about the appropriate process.
+                </p>
+
+            </div>
+
+
+            <div class="process-connector">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+
+            <div class="process-item">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <h3>Get Assistance</h3>
+
+                <p>
+                    Proceed with the required assistance and documentation.
+                </p>
 
             </div>
 
@@ -431,238 +810,155 @@
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================
      WHY CHOOSE US
-     ===================================================== -->
+========================= -->
 
-<section class="section why"
-         id="why">
-
-    <div class="container two-col">
-
-
-        <div class="why-panel">
-
-            <div class="seal">
-                BB
-            </div>
-
-            <h3>
-                কেন ভূমি বন্ধু?
-            </h3>
-
-            <p>
-                জমি ও সম্পত্তি সংক্রান্ত বিষয়কে
-                সহজভাবে বোঝা এবং প্রয়োজনীয়
-                সহায়তা পাওয়ার জন্য একটি
-                নির্ভরযোগ্য প্ল্যাটফর্ম।
-            </p>
-
-
-            <div class="stat-row">
-
-                <div>
-
-                    <strong>
-                        01
-                    </strong>
-
-                    <span>
-                        সহজ প্রক্রিয়া
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>
-                        02
-                    </strong>
-
-                    <span>
-                        স্বচ্ছ তথ্য
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>
-                        03
-                    </strong>
-
-                    <span>
-                        দ্রুত যোগাযোগ
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div>
-
-            <p class="eyebrow green">
-                আমাদের অঙ্গীকার
-            </p>
-
-            <h2>
-                পরিষ্কার তথ্য ও দায়িত্বশীল সহযোগিতা
-            </h2>
-
-
-            <ul class="check-list">
-
-                <li>
-
-                    <span>✓</span>
-
-                    জমি সংক্রান্ত তথ্য সহজভাবে বোঝানো
-
-                </li>
-
-
-                <li>
-
-                    <span>✓</span>
-
-                    প্রয়োজনীয় নথিপত্র সম্পর্কে নির্দেশনা
-
-                </li>
-
-
-                <li>
-
-                    <span>✓</span>
-
-                    রেজিস্ট্রেশন ও রেকর্ড সংক্রান্ত সহায়তা
-
-                </li>
-
-
-                <li>
-
-                    <span>✓</span>
-
-                    WhatsApp-এর মাধ্যমে সহজ যোগাযোগ
-
-                </li>
-
-
-                <li>
-
-                    <span>✓</span>
-
-                    প্রতিটি কুয়েরি গুরুত্ব সহকারে বিবেচনা
-
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PROCESS
-     ===================================================== -->
-
-<section class="section"
-         id="process">
+<section class="section why-section">
 
     <div class="container">
 
-        <div class="section-head">
+        <div class="why-container">
 
-            <p class="eyebrow green">
-                কীভাবে কাজ করে
-            </p>
+            <div class="why-content">
 
-            <h2>
-                মাত্র কয়েকটি সহজ ধাপে
-            </h2>
+                <span class="section-label">
+                    WHY BHUMI BANDHU
+                </span>
 
-            <p>
-                আপনার জমি বা সম্পত্তি সংক্রান্ত
-                বিষয়টি আমাদের জানান।
-            </p>
-
-        </div>
-
-
-        <div class="steps">
-
-
-            <div class="step">
-
-                <b>01</b>
-
-                <h3>
-                    কুয়েরি পাঠান
-                </h3>
+                <h2>
+                    Land Services Without
+                    <span>Unnecessary Complexity</span>
+                </h2>
 
                 <p>
-                    অনলাইন ফর্ম পূরণ করে আপনার
-                    সমস্যার বিস্তারিত জানান।
+                    We focus on making land-related procedures easier
+                    to understand by providing organized information,
+                    documentation guidance and personal assistance.
                 </p>
+
+                <div class="why-list">
+
+                    <div class="why-item">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <div>
+                            <strong>Easy Communication</strong>
+                            <p>
+                                Get information in a simple and understandable way.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <div>
+                            <strong>Organized Service</strong>
+                            <p>
+                                Your requirement is handled in a structured manner.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <span>
+                            <i class="fa-solid fa-check"></i>
+                        </span>
+
+                        <div>
+                            <strong>Transparent Approach</strong>
+                            <p>
+                                Clear communication about the assistance being provided.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
 
-            <div class="step">
+            <div class="why-stats">
 
-                <b>02</b>
+                <div class="stat-card">
 
-                <h3>
-                    তথ্য দিন
-                </h3>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
 
-                <p>
-                    জেলা, মৌজা, দাগ, খতিয়ান এবং
-                    প্রয়োজনীয় তথ্য প্রদান করুন।
-                </p>
+                    <strong class="counter" data-target="8">
+                        0
+                    </strong>
 
-            </div>
+                    <span>
+                        Service Categories
+                    </span>
 
-
-            <div class="step">
-
-                <b>03</b>
-
-                <h3>
-                    আলোচনা
-                </h3>
-
-                <p>
-                    WhatsApp-এর মাধ্যমে আপনার
-                    বিষয়টি নিয়ে আলোচনা করুন।
-                </p>
-
-            </div>
+                </div>
 
 
-            <div class="step">
+                <div class="stat-card">
 
-                <b>04</b>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
 
-                <h3>
-                    প্রয়োজনীয় সহায়তা
-                </h3>
+                    <strong class="counter" data-target="100">
+                        0
+                    </strong>
 
-                <p>
-                    আপনার প্রয়োজন অনুযায়ী
-                    পরবর্তী পদক্ষেপ সম্পর্কে জানুন।
-                </p>
+                    <span>
+                        Documentation Focus
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <strong>
+                        Personal
+                    </strong>
+
+                    <span>
+                        Assistance
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <strong>
+                        Easy
+                    </strong>
+
+                    <span>
+                        Communication
+                    </span>
+
+                </div>
 
             </div>
 
@@ -673,95 +969,438 @@
 </section>
 
 
+<!-- =========================
+     ENQUIRY SECTION
+========================= -->
 
-<!-- =====================================================
-     GALLERY
-     ===================================================== -->
-
-<section class="section gallery-section"
-         id="gallery">
+<section class="section enquiry-section" id="enquiry">
 
     <div class="container">
 
-        <div class="section-head">
+        <div class="enquiry-container">
 
-            <p class="eyebrow green">
-                গ্যালারি
-            </p>
+            <div class="enquiry-info">
+
+                <span class="section-label">
+                    GET ASSISTANCE
+                </span>
+
+                <h2>
+                    Tell Us What
+                    <span>You Need</span>
+                </h2>
+
+                <p>
+                    Submit a quick enquiry and tell us about your
+                    land or property related requirement.
+                </p>
+
+
+                <div class="contact-mini-list">
+
+                    <a href="tel:+919999999999"
+                       class="contact-mini">
+
+                        <span>
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+
+                        <div>
+                            <small>Call Us</small>
+                            <strong>+91 99999 99999</strong>
+                        </div>
+
+                    </a>
+
+
+                    <a href="https://wa.me/919999999999"
+                       target="_blank"
+                       class="contact-mini">
+
+                        <span>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+
+                        <div>
+                            <small>WhatsApp</small>
+                            <strong>Chat with us</strong>
+                        </div>
+
+                    </a>
+
+
+                    <a href="mailto:info@bhumibandhu.in"
+                       class="contact-mini">
+
+                        <span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+
+                        <div>
+                            <small>Email</small>
+                            <strong>info@bhumibandhu.in</strong>
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <div class="notice-box">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <p>
+                        Please do not submit sensitive documents or
+                        confidential information through this form.
+                        We will guide you regarding the appropriate
+                        documents when required.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="enquiry-form-wrapper">
+
+                <form id="enquiryForm" class="enquiry-form">
+
+                    <div class="form-header">
+
+                        <h3>Send an Enquiry</h3>
+
+                        <p>
+                            Fill in the details below.
+                        </p>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       placeholder="Enter your name"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Mobile Number
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input type="tel"
+                                       id="phone"
+                                       name="phone"
+                                       placeholder="Enter mobile number"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Select Service
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-list"></i>
+
+                            <select id="service"
+                                    name="service"
+                                    required>
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option value="Land Registration">
+                                    Land Registration
+                                </option>
+
+                                <option value="Land Records">
+                                    Land Records
+                                </option>
+
+                                <option value="Mutation Assistance">
+                                    Mutation Assistance
+                                </option>
+
+                                <option value="Deed Assistance">
+                                    Deed Assistance
+                                </option>
+
+                                <option value="Property Verification">
+                                    Property Verification
+                                </option>
+
+                                <option value="Land Sale & Purchase">
+                                    Land Sale & Purchase
+                                </option>
+
+                                <option value="Land Tax / Khajna">
+                                    Land Tax / Khajna
+                                </option>
+
+                                <option value="Office Related Assistance">
+                                    Office Related Assistance
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Property / Land Location
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input type="text"
+                                   id="location"
+                                   name="location"
+                                   placeholder="e.g. Bolpur, Birbhum">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Your Requirement
+                        </label>
+
+                        <div class="input-box textarea-box">
+
+                            <i class="fa-regular fa-comment-dots"></i>
+
+                            <textarea id="message"
+                                      name="message"
+                                      rows="5"
+                                      placeholder="Briefly describe what assistance you need..."
+                                      required></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn btn-primary form-submit">
+
+                        Submit Enquiry
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+
+                    <p class="form-note">
+                        By submitting this form, you agree to be contacted
+                        regarding your enquiry.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ SECTION
+========================= -->
+
+<section class="section faq-section" id="faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                FAQ
+            </span>
 
             <h2>
-                জমি ও সম্পত্তি সংক্রান্ত কাজ
+                Frequently Asked
+                <span>Questions</span>
             </h2>
 
             <p>
-                আমাদের পরিষেবার বিভিন্ন ক্ষেত্রের
-                কিছু উদাহরণ।
+                Some common questions about our land assistance services.
             </p>
 
         </div>
 
 
-        <div class="gallery-grid">
+        <div class="faq-container">
 
+            <div class="faq-item">
 
-            <div class="gallery-item"
-                 data-image="gallery/land.svg"
-                 data-title="জমি ও সম্পত্তি">
+                <button class="faq-question">
 
-                <img src="gallery/land.svg"
-                     alt="জমি ও সম্পত্তি"
-                     loading="lazy">
+                    <span>
+                        What services does Bhumi Bandhu provide?
+                    </span>
 
-                <div class="gallery-caption">
-                    জমি ও সম্পত্তি
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Bhumi Bandhu provides assistance and guidance
+                        relating to land registration, land records,
+                        mutation, deed documentation, property
+                        verification and land sale or purchase related
+                        matters.
+                    </p>
+
                 </div>
 
             </div>
 
 
+            <div class="faq-item">
 
-            <div class="gallery-item"
-                 data-image="gallery/registry.svg"
-                 data-title="রেজিস্ট্রেশন ও দলিল">
+                <button class="faq-question">
 
-                <img src="gallery/registry.svg"
-                     alt="রেজিস্ট্রেশন ও দলিল"
-                     loading="lazy">
+                    <span>
+                        Can I ask about my land documents?
+                    </span>
 
-                <div class="gallery-caption">
-                    রেজিস্ট্রেশন ও দলিল
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. You can submit an enquiry describing your
+                        requirement. We can then guide you about the
+                        relevant process and documentation.
+                    </p>
+
                 </div>
 
             </div>
 
 
+            <div class="faq-item">
 
-            <div class="gallery-item"
-                 data-image="gallery/records.svg"
-                 data-title="ভূমি রেকর্ড">
+                <button class="faq-question">
 
-                <img src="gallery/records.svg"
-                     alt="ভূমি রেকর্ড"
-                     loading="lazy">
+                    <span>
+                        Do you help with land registration?
+                    </span>
 
-                <div class="gallery-caption">
-                    ভূমি রেকর্ড
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We provide assistance and documentation guidance
+                        relating to land registration. The exact assistance
+                        available depends on the nature of the matter.
+                    </p>
+
                 </div>
 
             </div>
 
 
+            <div class="faq-item">
 
-            <div class="gallery-item"
-                 data-image="gallery/property.svg"
-                 data-title="সম্পত্তি যাচাই">
+                <button class="faq-question">
 
-                <img src="gallery/property.svg"
-                     alt="সম্পত্তি যাচাই"
-                     loading="lazy">
+                    <span>
+                        Do you provide legal advice?
+                    </span>
 
-                <div class="gallery-caption">
-                    সম্পত্তি যাচাই
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        General information and documentation assistance
+                        can be provided. Where a matter requires formal
+                        legal advice or representation, an appropriately
+                        qualified legal professional should be consulted.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        How can I contact Bhumi Bandhu?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        You can contact us by phone, WhatsApp or by
+                        submitting the enquiry form on this website.
+                    </p>
+
                 </div>
 
             </div>
@@ -773,72 +1412,36 @@
 </section>
 
 
-
-<!-- =====================================================
-     GALLERY LIGHTBOX
-     ===================================================== -->
-
-<div id="galleryLightbox"
-     class="gallery-lightbox"
-     role="dialog"
-     aria-modal="true"
-     aria-label="Gallery Image">
-
-    <div class="lightbox-content">
-
-        <button
-            type="button"
-            class="gallery-close"
-            aria-label="Close">
-
-            ×
-
-        </button>
-
-
-        <img id="lightboxImage"
-             src=""
-             alt="">
-
-
-        <div id="lightboxTitle"
-             class="lightbox-title">
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CTA
-     ===================================================== -->
+<!-- =========================
+     CTA SECTION
+========================= -->
 
 <section class="cta-section">
 
     <div class="container">
 
-        <div class="cta-box">
+        <div class="cta-container">
 
-            <div>
+            <div class="cta-icon">
+                <i class="fa-solid fa-landmark"></i>
+            </div>
+
+            <div class="cta-content">
 
                 <h2>
-                    আপনার জমির বিষয়ে জানতে চান?
+                    Need Help With a Land or Property Matter?
                 </h2>
 
                 <p>
-                    আপনার তথ্য দিয়ে কুয়েরি পাঠান।
+                    Tell us what you need and get started with
+                    the right assistance.
                 </p>
 
             </div>
 
-
-            <a href="#query"
-               class="btn btn-light">
-
-                কুয়েরি পাঠান →
-
+            <a href="#enquiry" class="btn btn-light">
+                Send Enquiry
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
 
         </div>
@@ -848,325 +1451,105 @@
 </section>
 
 
+<!-- =========================
+     CONTACT SECTION
+========================= -->
 
-<!-- =====================================================
-     QUERY FORM
-     ===================================================== -->
-
-<section class="query-section"
-         id="query">
+<section class="section contact-section" id="contact">
 
     <div class="container">
 
-        <div class="section-head">
+        <div class="section-heading">
 
-            <p class="eyebrow green">
-                অনলাইন কুয়েরি
-            </p>
+            <span class="section-label">
+                CONTACT US
+            </span>
 
             <h2>
-                আপনার জমির বিষয়ে জানতে চান?
+                Let's Talk About
+                <span>Your Requirement</span>
             </h2>
-
-            <p>
-                নিচের ফর্মটি পূরণ করে WhatsApp-এর
-                মাধ্যমে আপনার কুয়েরি পাঠান।
-            </p>
-
-        </div>
-
-
-        <form id="queryForm"
-              class="query-form">
-
-
-            <div class="form-grid">
-
-
-                <div class="form-group">
-
-                    <label for="name">
-                        নাম *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="আপনার নাম"
-                        autocomplete="name"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="mobile">
-                        মোবাইল নম্বর *
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="mobile"
-                        name="mobile"
-                        placeholder="১০ সংখ্যার মোবাইল নম্বর"
-                        maxlength="10"
-                        inputmode="numeric"
-                        autocomplete="tel"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="service">
-                        পরিষেবা *
-                    </label>
-
-                    <select
-                        id="service"
-                        name="service"
-                        required>
-
-                        <option value="">
-                            পরিষেবা নির্বাচন করুন
-                        </option>
-
-                        <option value="জমি রেজিস্ট্রেশন">
-                            জমি রেজিস্ট্রেশন
-                        </option>
-
-                        <option value="দলিল সংক্রান্ত সহায়তা">
-                            দলিল সংক্রান্ত সহায়তা
-                        </option>
-
-                        <option value="ভূমি রেকর্ড">
-                            ভূমি রেকর্ড
-                        </option>
-
-                        <option value="মিউটেশন">
-                            মিউটেশন
-                        </option>
-
-                        <option value="সম্পত্তি যাচাই">
-                            সম্পত্তি যাচাই
-                        </option>
-
-                        <option value="জমি কেনাবেচা সহায়তা">
-                            জমি কেনাবেচা সহায়তা
-                        </option>
-
-                        <option value="অন্যান্য">
-                            অন্যান্য
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="district">
-                        জেলা
-                    </label>
-
-                    <input
-                        type="text"
-                        id="district"
-                        name="district"
-                        placeholder="যেমন: বীরভূম">
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="mouza">
-                        মৌজা
-                    </label>
-
-                    <input
-                        type="text"
-                        id="mouza"
-                        name="mouza"
-                        placeholder="মৌজার নাম">
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="dag">
-                        দাগ নম্বর
-                    </label>
-
-                    <input
-                        type="text"
-                        id="dag"
-                        name="dag"
-                        placeholder="দাগ নম্বর">
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="khatian">
-                        খতিয়ান নম্বর
-                    </label>
-
-                    <input
-                        type="text"
-                        id="khatian"
-                        name="khatian"
-                        placeholder="খতিয়ান নম্বর">
-
-                </div>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="details">
-                    বিস্তারিত *
-                </label>
-
-                <textarea
-                    id="details"
-                    name="details"
-                    rows="6"
-                    placeholder="আপনার জমি বা সম্পত্তি সংক্রান্ত সমস্যাটি বিস্তারিত লিখুন..."
-                    required></textarea>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="btn query-submit">
-
-                WhatsApp-এ কুয়েরি পাঠান →
-
-            </button>
-
-
-            <p class="form-note">
-
-                Submit করলে WhatsApp খুলবে এবং
-                আপনার দেওয়া তথ্য স্বয়ংক্রিয়ভাবে
-                মেসেজে যুক্ত হবে।
-
-            </p>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT
-     ===================================================== -->
-
-<section class="section contact"
-         id="contact">
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <p class="eyebrow green">
-                যোগাযোগ
-            </p>
-
-            <h2>
-                ভূমি বন্ধুর সঙ্গে যোগাযোগ করুন
-            </h2>
-
-            <p>
-                আপনার জমি বা সম্পত্তি সংক্রান্ত
-                প্রশ্নের জন্য আমাদের সঙ্গে যোগাযোগ করুন।
-            </p>
 
         </div>
 
 
         <div class="contact-grid">
 
+            <div class="contact-card">
 
-            <a href="tel:+918370833510"
-               class="contact-card"
-               data-phone>
-
-                <span>
-                    ☎
-                </span>
-
-                <div>
-
-                    <small>
-                        ফোন
-                    </small>
-
-                    <strong>
-                        +91 8370833510
-                    </strong>
-
+                <div class="contact-card-icon">
+                    <i class="fa-solid fa-phone"></i>
                 </div>
 
-            </a>
+                <h3>Call Us</h3>
+
+                <p>
+                    Speak with us about your requirement.
+                </p>
+
+                <a href="tel:+919999999999">
+                    +91 99999 99999
+                </a>
+
+            </div>
 
 
-            <a href="mailto:officework.bolpur@gmail.com"
-               class="contact-card"
-               data-email>
+            <div class="contact-card">
 
-                <span>
-                    ✉
-                </span>
-
-                <div>
-
-                    <small>
-                        ই-মেইল
-                    </small>
-
-                    <strong>
-                        officework.bolpur@gmail.com
-                    </strong>
-
+                <div class="contact-card-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
                 </div>
 
-            </a>
+                <h3>WhatsApp</h3>
+
+                <p>
+                    Send us a message directly on WhatsApp.
+                </p>
+
+                <a href="https://wa.me/919999999999"
+                   target="_blank">
+                    Chat on WhatsApp
+                </a>
+
+            </div>
 
 
-            <a href="#"
-               class="contact-card"
-               data-whatsapp>
+            <div class="contact-card">
 
-                <span>
-                    W
-                </span>
-
-                <div>
-
-                    <small>
-                        WhatsApp
-                    </small>
-
-                    <strong>
-                        সরাসরি যোগাযোগ করুন
-                    </strong>
-
+                <div class="contact-card-icon">
+                    <i class="fa-solid fa-envelope"></i>
                 </div>
 
-            </a>
+                <h3>Email</h3>
+
+                <p>
+                    Send your general enquiry by email.
+                </p>
+
+                <a href="mailto:info@bhumibandhu.in">
+                    info@bhumibandhu.in
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-card-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>Location</h3>
+
+                <p>
+                    Serving land and property related requirements.
+                </p>
+
+                <a href="#contact">
+                    West Bengal, India
+                </a>
+
+            </div>
 
         </div>
 
@@ -1177,121 +1560,133 @@
 </main>
 
 
-
-<!-- =====================================================
+<!-- =========================
      FOOTER
-     ===================================================== -->
+========================= -->
 
-<footer>
+<footer class="footer">
 
-    <div class="container footer-grid">
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-about">
+
+                <a href="#home" class="logo footer-logo">
+
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>Bhumi</strong>
+                        <span>Bandhu</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Making land and property related services
+                    simpler through organized assistance,
+                    documentation guidance and clear communication.
+                </p>
 
 
-        <div>
+                <div class="social-links">
 
-            <img src="logo.png"
-                 alt="ভূমি বন্ধু"
-                 class="footer-logo">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://wa.me/919999999999"
+                       target="_blank"
+                       aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#process">How It Works</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Services</h3>
+
+                <a href="#services">Land Registration</a>
+                <a href="#services">Land Records</a>
+                <a href="#services">Mutation Assistance</a>
+                <a href="#services">Deed Assistance</a>
+                <a href="#services">Property Verification</a>
+                <a href="#services">Land Sale & Purchase</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <a href="tel:+919999999999">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 99999 99999
+                </a>
+
+                <a href="mailto:info@bhumibandhu.in">
+                    <i class="fa-solid fa-envelope"></i>
+                    info@bhumibandhu.in
+                </a>
+
+                <a href="#contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    West Bengal, India
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
 
             <p>
-
-                জমি ও সম্পত্তি সংক্রান্ত
-                বিভিন্ন কাজে তথ্য ও
-                প্রয়োজনীয় সহায়তার জন্য
-                ভূমি বন্ধু।
-
+                © <span id="currentYear"></span>
+                Bhumi Bandhu. All Rights Reserved.
             </p>
 
-        </div>
+            <div>
 
+                <a href="#">
+                    Privacy Policy
+                </a>
 
-        <div>
+                <a href="#">
+                    Terms & Conditions
+                </a>
 
-            <h4>
-                দ্রুত লিংক
-            </h4>
-
-            <a href="#home">
-                হোম
-            </a>
-
-            <a href="#services">
-                পরিষেবা
-            </a>
-
-            <a href="#about">
-                আমাদের সম্পর্কে
-            </a>
-
-            <a href="#gallery">
-                গ্যালারি
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                পরিষেবা
-            </h4>
-
-            <a href="#services">
-                রেজিস্ট্রেশন
-            </a>
-
-            <a href="#services">
-                দলিল
-            </a>
-
-            <a href="#services">
-                ভূমি রেকর্ড
-            </a>
-
-            <a href="#services">
-                মিউটেশন
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                যোগাযোগ
-            </h4>
-
-            <a href="tel:+918370833510">
-                +91 8370833510
-            </a>
-
-            <a href="mailto:officework.bolpur@gmail.com">
-                officework.bolpur@gmail.com
-            </a>
-
-            <a href="#query">
-                অনলাইন কুয়েরি
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <span>
-
-                © <span id="year"></span>
-                Bhumi Bandhu. All Rights Reserved.
-
-            </span>
-
-            <span>
-                Land & Property Assistance
-            </span>
+            </div>
 
         </div>
 
@@ -1300,12 +1695,70 @@
 </footer>
 
 
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
 
-<!-- =====================================================
+<a href="https://wa.me/919999999999"
+   class="floating-whatsapp"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    <span>
+        Chat with us
+    </span>
+
+</a>
+
+
+<!-- =========================
+     BACK TO TOP
+========================= -->
+
+<button class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- =========================
+     TOAST MESSAGE
+========================= -->
+
+<div class="toast" id="toast">
+
+    <div class="toast-icon">
+        <i class="fa-solid fa-check"></i>
+    </div>
+
+    <div>
+        <strong>Thank You!</strong>
+        <span id="toastMessage">
+            Your enquiry has been received.
+        </span>
+    </div>
+
+    <button id="closeToast"
+            aria-label="Close notification">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+</div>
+
+
+<!-- =========================
      JAVASCRIPT
-     ===================================================== -->
+========================= -->
 
 <script src="script.js"></script>
 
 </body>
 </html>
+```
