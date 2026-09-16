@@ -1,131 +1,1311 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ভূমি বন্ধু - জমি ও সম্পত্তি সংক্রান্ত সহায়তা">
-<title>ভূমি বন্ধু | জমি ও সম্পত্তি সংক্রান্ত সহায়তা</title>
-<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="ভূমি বন্ধু - জমি ও সম্পত্তি সংক্রান্ত সহায়তা, রেজিস্ট্রেশন, দলিল, রেকর্ড, মিউটেশন ও সম্পত্তি যাচাই।">
+
+    <meta name="keywords"
+          content="Bhumi Bandhu, ভূমি বন্ধু, জমি রেজিস্ট্রেশন, জমির রেকর্ড, দলিল, মিউটেশন, সম্পত্তি যাচাই">
+
+    <meta name="author"
+          content="Bhumi Bandhu">
+
+    <title>ভূমি বন্ধু | জমি ও সম্পত্তি সংক্রান্ত সহায়তা</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#home"><img src="logo.svg" alt="ভূমি বন্ধু"><b>ভূমি বন্ধু</b></a>
-    <button class="menu" aria-label="মেনু">☰</button>
-    <nav>
-      <a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a><a href="#services">পরিষেবা</a><a href="#gallery">গ্যালারি</a>
-      <a href="#why">কেন ভূমি বন্ধু</a><a href="#process">কীভাবে কাজ করে</a><a href="#contact">যোগাযোগ</a>
-      <a class="wa" data-wa href="#">WhatsApp</a>
-    </nav>
-  </div>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="site-header">
+
+    <div class="container nav-wrap">
+
+        <a href="#home"
+           class="brand"
+           aria-label="ভূমি বন্ধু Home">
+
+            <img src="logo.png"
+                 alt="ভূমি বন্ধু Logo">
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="মেনু খুলুন"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <nav class="nav"
+             aria-label="প্রধান নেভিগেশন">
+
+            <a href="#home">হোম</a>
+
+            <a href="#services">পরিষেবা</a>
+
+            <a href="#about">আমাদের সম্পর্কে</a>
+
+            <a href="#why">কেন ভূমি বন্ধু</a>
+
+            <a href="#process">কীভাবে কাজ করে</a>
+
+            <a href="#gallery">গ্যালারি</a>
+
+            <a href="#query">কুয়েরি</a>
+
+            <a href="#contact">যোগাযোগ</a>
+
+            <a href="#"
+               class="nav-wa"
+               data-whatsapp>
+                WhatsApp
+            </a>
+
+        </nav>
+
+    </div>
+
 </header>
 
-<section id="home" class="hero">
-<div class="container hero-grid">
-<div>
-<small>জমি • রেজিস্ট্রেশন • রেকর্ড • সম্পত্তি</small>
-<h1>আপনার জমি সুরক্ষিত রাখুন,<br><span>ভবিষ্যৎ গড়ুন।</span></h1>
-<p>পশ্চিমবঙ্গে জমি রেজিস্ট্রেশন, ভূমি রেকর্ড, নামজারি, দলিলপত্র এবং সম্পত্তি সংক্রান্ত বিষয়ে সহজ ও পেশাদার সহায়তা।</p>
-<div class="buttons"><a class="btn" data-wa href="#">ফ্রি পরামর্শ নিন</a><a class="btn outline" href="#services">পরিষেবাগুলি দেখুন</a></div>
-<strong>✓ আপনার জমি, আমাদের সহায়তা</strong>
-</div>
-<div class="hero-card"><div class="house">⌂</div><h2>বিশ্বস্ত জমি সহায়তা</h2><p>নথিপত্র, রেজিস্ট্রেশন, রেকর্ড ও সম্পত্তি সংক্রান্ত কাজ ধাপে ধাপে বুঝে এগিয়ে যেতে সহায়তা।</p><div class="tags"><i>সহজ</i><i>স্বচ্ছ</i><i>পেশাদার</i></div></div>
-</div>
-  <section id="query" class="query-section"><div class="container query-grid"><div><small>অনলাইন কুয়েরি</small><h2>আপনার জমির বিষয়টি <span>জানান</span></h2><p>ফর্মটি পূরণ করে পাঠালে তথ্যগুলি WhatsApp message হিসেবে সরাসরি আপনার WhatsApp নম্বরে যাবে।</p></div>
-<form id="landQueryForm" class="query-form"><div class="form-row"><label>নাম<input name="name" required placeholder="আপনার নাম"></label><label>মোবাইল<input name="mobile" required type="tel" placeholder="মোবাইল নম্বর"></label></div>
-<label>পরিষেবা<select name="service" required><option value="">নির্বাচন করুন</option><option>জমি রেজিস্ট্রেশন</option><option>ভূমি রেকর্ড সহায়তা</option><option>নামজারি / মিউটেশন</option><option>দলিল সংক্রান্ত সহায়তা</option><option>জমি কেনা-বেচা</option><option>সম্পত্তি যাচাই</option><option>অন্যান্য</option></select></label>
-<div class="form-row"><label>জেলা<input name="district" placeholder="যেমন: বীরভূম"></label><label>মৌজা<input name="mouza" placeholder="মৌজার নাম"></label></div>
-<div class="form-row"><label>দাগ নম্বর<input name="dag" placeholder="দাগ নম্বর"></label><label>খতিয়ান নম্বর<input name="khatian" placeholder="খতিয়ান নম্বর"></label></div>
-<label>বিস্তারিত<textarea name="details" required rows="5" placeholder="আপনার বিষয়টি লিখুন..."></textarea></label>
-<button class="btn query-submit" type="submit">WhatsApp-এ কুয়েরি পাঠান →</button><small class="form-note">নিচের script.js-এ আপনার WhatsApp নম্বর বসাতে হবে।</small></form></div></section>
 
 
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<main id="home">
+
+<section class="hero">
+
+    <div class="hero-art">
+
+        <div class="sun"></div>
+
+        <div class="hill hill-a"></div>
+
+        <div class="hill hill-b"></div>
+
+        <div class="field f1"></div>
+
+        <div class="field f2"></div>
 
 
-<script>
-const BB_CONFIG={whatsapp:"919XXXXXXXXX"};
-document.addEventListener("DOMContentLoaded",()=>{
-document.querySelectorAll("[data-wa]").forEach(a=>{a.href="https://wa.me/"+BB_CONFIG.whatsapp+"?text="+encodeURIComponent("নমস্কার ভূমি বন্ধু, আমার জমি/সম্পত্তি সংক্রান্ত বিষয়ে সহায়তা প্রয়োজন।");a.target="_blank";});
-const m=document.querySelector(".menu"),n=document.querySelector("nav");if(m)m.onclick=()=>n.classList.toggle("open");
-const f=document.getElementById("landQueryForm");if(f)f.onsubmit=e=>{e.preventDefault();let d=new FormData(f),mob=String(d.get("mobile")||"").replace(/\D/g,"");if(mob.length<10){alert("দয়া করে সঠিক মোবাইল নম্বর দিন।");return;}let t="*ভূমি বন্ধু — নতুন কুয়েরি*\n━━━━━━━━━━━━━━\n*নাম:* "+d.get("name")+"\n*মোবাইল:* "+d.get("mobile")+"\n*পরিষেবা:* "+d.get("service")+"\n*জেলা:* "+(d.get("district")||"দেওয়া হয়নি")+"\n*মৌজা:* "+(d.get("mouza")||"দেওয়া হয়নি")+"\n*দাগ:* "+(d.get("dag")||"দেওয়া হয়নি")+"\n*খতিয়ান:* "+(d.get("khatian")||"দেওয়া হয়নি")+"\n\n*বিস্তারিত:*\n"+d.get("details");window.open("https://wa.me/"+BB_CONFIG.whatsapp+"?text="+encodeURIComponent(t),"_blank");};
-const box=document.getElementById("galleryLightbox"),im=document.getElementById("lightboxImage"),ti=document.getElementById("lightboxTitle");document.querySelectorAll(".gallery-item").forEach(x=>x.onclick=()=>{im.src=x.dataset.image;ti.textContent=x.dataset.title;box.classList.add("open")});document.querySelector(".gallery-close").onclick=()=>box.classList.remove("open");box.onclick=e=>{if(e.target===box)box.classList.remove("open")};
-});
-</script>
+        <div class="house">
+
+            <div class="roof"></div>
+
+            <div class="home-body">
+
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
+    <div class="container hero-content">
+
+        <p class="eyebrow">
+            জমি ও সম্পত্তি সংক্রান্ত সহায়তা
+        </p>
 
 
+        <h1>
+
+            আপনার জমির
+
+            <span>বিশ্বস্ত সহায়ক</span>
+
+        </h1>
 
 
+        <p class="hero-copy">
+
+            জমি রেজিস্ট্রেশন, দলিল, রেকর্ড, মিউটেশন,
+            সম্পত্তি যাচাই এবং জমি কেনাবেচা সংক্রান্ত
+            বিভিন্ন কাজে সহজ ও নির্ভরযোগ্য সহায়তা।
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a href="#query"
+               class="btn btn-primary">
+
+                কুয়েরি করুন →
+
+            </a>
+
+
+            <a href="#services"
+               class="btn btn-outline">
+
+                আমাদের পরিষেবা
+
+            </a>
+
+        </div>
+
+
+        <p class="trust-line">
+
+            <span>✓</span>
+
+            স্বচ্ছতা • দায়িত্বশীলতা • সহযোগিতা
+
+        </p>
+
+    </div>
 
 </section>
 
-<section id="services"><div class="container">
-<div class="heading"><small>আমাদের পরিষেবা</small><h2>জমি ও সম্পত্তির কাজে প্রয়োজনীয় সহায়তা</h2><p>আপনার প্রয়োজন অনুযায়ী নথিপত্র ও প্রক্রিয়া সম্পর্কে পরিষ্কার নির্দেশনা।</p></div>
-<div class="cards">
-<article><b>০১</b><h3>জমি রেজিস্ট্রেশন</h3><p>দলিল রেজিস্ট্রেশন ও সংশ্লিষ্ট নথিপত্র এবং প্রক্রিয়া সম্পর্কে সহায়তা।</p></article>
-<article><b>০২</b><h3>ভূমি রেকর্ড সহায়তা</h3><p>খতিয়ান, দাগ নম্বর, মৌজা ও রেকর্ড সংক্রান্ত তথ্য খুঁজতে সহায়তা।</p></article>
-<article><b>০৩</b><h3>নামজারি সহায়তা</h3><p>নাম পরিবর্তন ও মিউটেশন সংক্রান্ত প্রক্রিয়ায় সহায়তা।</p></article>
-<article><b>০৪</b><h3>দলিল সংক্রান্ত সহায়তা</h3><p>বিক্রয়, দান, লিজসহ বিভিন্ন সম্পত্তির দলিলের প্রয়োজনীয়তা বুঝতে সহায়তা।</p></article>
-<article><b>০৫</b><h3>জমি কেনা-বেচা</h3><p>জমি কেনাবেচায় নথিপত্র ও প্রক্রিয়া সম্পর্কে সহায়তা।</p></article>
-<article><b>০৬</b><h3>সম্পত্তি যাচাই</h3><p>লেনদেনের আগে নথি ও মালিকানা সংক্রান্ত বিষয় যাচাইয়ে সহায়তা।</p></article>
-</div></div></section>
 
-<section id="about" class="soft"><div class="container split">
-<div><small>ভূমি বন্ধু সম্পর্কে</small><h2>জমির বিষয় হোক সহজ ও পরিষ্কার।</h2></div>
-<div><p>ভূমি বন্ধু একটি জমি ও সম্পত্তি সংক্রান্ত ডকুমেন্টেশন এবং সহায়তা পরিষেবা, যার লক্ষ্য জমি সংক্রান্ত প্রক্রিয়াগুলি সহজে বোঝা ও পরিচালনা করতে সাহায্য করা।</p><p>নথিপত্র গুছিয়ে নেওয়া, প্রক্রিয়ার প্রয়োজনীয়তা বোঝা এবং রেজিস্ট্রেশন, রেকর্ড ও সম্পত্তি সংক্রান্ত কাজে প্রস্তুতি নিতে আমরা সহায়তা করি।</p></div>
-</div></section>
 
-<section id="why"><div class="container split">
-<div><small>কেন ভূমি বন্ধু</small><h2>সহজ ভাষায় পরিষ্কার সহায়তা।</h2>
-<ul><li>সহজ ও ব্যবহারিক পরামর্শ</li><li>নথিপত্র-কেন্দ্রিক কাজের পদ্ধতি</li><li>স্বচ্ছ প্রক্রিয়া ও যোগাযোগ</li><li>ধাপে ধাপে ফলো-আপ সহায়তা</li><li>গ্রাহক-কেন্দ্রিক পরিষেবা</li></ul></div>
-<div class="dark"><div>ভূমি<br>বন্ধু</div><p>জমি সংক্রান্ত কাজের প্রতিটি ধাপে পরিষ্কার ধারণা নিয়ে এগিয়ে চলুন।</p></div>
-</div></section>
+<!-- =====================================================
+     SERVICES
+     ===================================================== -->
 
-<section id="process" class="soft"><div class="container">
-<div class="heading"><small>সহজ প্রক্রিয়া</small><h2>কীভাবে কাজ করে</h2></div>
-<div class="steps">
-<article><b>০১</b><h3>যোগাযোগ করুন</h3><p>আপনার প্রয়োজন ফোন বা WhatsApp-এ জানান।</p></article>
-<article><b>০২</b><h3>বিস্তারিত জানান</h3><p>জমি বা সম্পত্তি সংক্রান্ত সমস্যার তথ্য দিন।</p></article>
-<article><b>০৩</b><h3>পরামর্শ নিন</h3><p>প্রয়োজনীয় নথি ও পরবর্তী পদক্ষেপ সম্পর্কে জানুন।</p></article>
-<article><b>০৪</b><h3>প্রক্রিয়া সম্পন্ন করুন</h3><p>গোছানো নথিপত্র নিয়ে পরবর্তী ধাপে এগিয়ে যান।</p></article>
-</div></div></section>
+<section class="section services"
+         id="services">
 
-<section class="cta"><div class="container cta-in"><div><small>আজই শুরু করুন</small><h2>আপনার জমির কাজ আরও সহজ করি।</h2><p>আপনার প্রয়োজন WhatsApp-এ পাঠান।</p></div><a class="btn white" data-wa href="#">WhatsApp-এ যোগাযোগ করুন →</a></div></section>
+    <div class="container">
 
-<section id="gallery" class="gallery-section"><div class="container"><div class="heading"><small>আমাদের গ্যালারি</small><h2>জমি ও সম্পত্তির <span>কাজের ঝলক</span></h2><p>ভূমি সংক্রান্ত কাজ, নথিপত্র ও সম্পত্তি যাচাইয়ের বিভিন্ন দিক।</p></div><div class="gallery-grid">
-<button class="gallery-item large" data-image="gallery/land.svg" data-title="জমি ও সম্পত্তি"><img src="gallery/land.svg" alt="জমি ও সম্পত্তি"><span>জমি ও সম্পত্তি ↗</span></button>
-<button class="gallery-item" data-image="gallery/registry.svg" data-title="রেজিস্ট্রেশন ও দলিল"><img src="gallery/registry.svg" alt="রেজিস্ট্রেশন ও দলিল"><span>রেজিস্ট্রেশন ও দলিল ↗</span></button>
-<button class="gallery-item" data-image="gallery/records.svg" data-title="ভূমি রেকর্ড"><img src="gallery/records.svg" alt="ভূমি রেকর্ড"><span>ভূমি রেকর্ড ↗</span></button>
-<button class="gallery-item wide" data-image="gallery/property.svg" data-title="সম্পত্তি যাচাই"><img src="gallery/property.svg" alt="সম্পত্তি যাচাই"><span>সম্পত্তি যাচাই ↗</span></button></div></div></section>
-<section id="query" class="query-section"><div class="container query-grid"><div><small>অনলাইন কুয়েরি</small><h2>আপনার জমির বিষয়টি <span>জানান</span></h2><p>ফর্মটি পূরণ করে পাঠালে তথ্যগুলি WhatsApp message হিসেবে সরাসরি আপনার WhatsApp নম্বরে যাবে।</p></div>
-<form id="landQueryForm" class="query-form"><div class="form-row"><label>নাম<input name="name" required placeholder="আপনার নাম"></label><label>মোবাইল<input name="mobile" required type="tel" placeholder="মোবাইল নম্বর"></label></div>
-<label>পরিষেবা<select name="service" required><option value="">নির্বাচন করুন</option><option>জমি রেজিস্ট্রেশন</option><option>ভূমি রেকর্ড সহায়তা</option><option>নামজারি / মিউটেশন</option><option>দলিল সংক্রান্ত সহায়তা</option><option>জমি কেনা-বেচা</option><option>সম্পত্তি যাচাই</option><option>অন্যান্য</option></select></label>
-<div class="form-row"><label>জেলা<input name="district" placeholder="যেমন: বীরভূম"></label><label>মৌজা<input name="mouza" placeholder="মৌজার নাম"></label></div>
-<div class="form-row"><label>দাগ নম্বর<input name="dag" placeholder="দাগ নম্বর"></label><label>খতিয়ান নম্বর<input name="khatian" placeholder="খতিয়ান নম্বর"></label></div>
-<label>বিস্তারিত<textarea name="details" required rows="5" placeholder="আপনার বিষয়টি লিখুন..."></textarea></label>
-<button class="btn query-submit" type="submit">WhatsApp-এ কুয়েরি পাঠান →</button><small class="form-note">নিচের script.js-এ আপনার WhatsApp নম্বর বসাতে হবে।</small></form></div></section>
-<div class="gallery-lightbox" id="galleryLightbox"><button class="gallery-close">×</button><img id="lightboxImage"><p id="lightboxTitle"></p></div><section id="contact"><div class="container split">
-<div><small>যোগাযোগ</small><h2>ভূমি বন্ধুর সঙ্গে কথা বলুন</h2><p>জমি বা সম্পত্তি সংক্রান্ত আপনার প্রয়োজন জানাতে যোগাযোগ করুন।</p></div>
-<div class="contact">
-<a data-phone href="#"><b>ফোন</b><span data-phone-text>+91 9XXXXXXXXX</span></a>
-<a data-email href="#"><b>ইমেল</b><span data-email-text>yourmail@example.com</span></a>
-<div><b>পরিষেবা এলাকা</b><span>পশ্চিমবঙ্গ, ভারত</span></div>
-</div></div></section>
+        <div class="section-head">
 
-<footer><div class="container footer">
-<div><h2>ভূমি বন্ধু</h2><p>আপনার বিশ্বস্ত জমি ডকুমেন্টেশন ও সম্পত্তি সহায়তা সহযোগী।</p></div>
-<div><h4>দ্রুত লিংক</h4><a href="#services">পরিষেবা</a><a href="#gallery">গ্যালারি</a><a href="#query">কুয়েরি ফর্ম</a><a href="#about">আমাদের সম্পর্কে</a><a href="#contact">যোগাযোগ</a></div>
-<div><h4>গুরুত্বপূর্ণ</h4><p>ওয়েবসাইটের তথ্য সাধারণ সহায়তার জন্য; এটি আইনি পরামর্শ নয়।</p></div>
-</div><div class="copy">© ২০২৬ ভূমি বন্ধু — সর্বস্বত্ব সংরক্ষিত</div></footer>
-<script>
-const BB_CONFIG={whatsapp:"919XXXXXXXXX"};
-document.addEventListener("DOMContentLoaded",()=>{
-document.querySelectorAll("[data-wa]").forEach(a=>{a.href="https://wa.me/"+BB_CONFIG.whatsapp+"?text="+encodeURIComponent("নমস্কার ভূমি বন্ধু, আমার জমি/সম্পত্তি সংক্রান্ত বিষয়ে সহায়তা প্রয়োজন।");a.target="_blank";});
-const m=document.querySelector(".menu"),n=document.querySelector("nav");if(m)m.onclick=()=>n.classList.toggle("open");
-const f=document.getElementById("landQueryForm");if(f)f.onsubmit=e=>{e.preventDefault();let d=new FormData(f),mob=String(d.get("mobile")||"").replace(/\D/g,"");if(mob.length<10){alert("দয়া করে সঠিক মোবাইল নম্বর দিন।");return;}let t="*ভূমি বন্ধু — নতুন কুয়েরি*\n━━━━━━━━━━━━━━\n*নাম:* "+d.get("name")+"\n*মোবাইল:* "+d.get("mobile")+"\n*পরিষেবা:* "+d.get("service")+"\n*জেলা:* "+(d.get("district")||"দেওয়া হয়নি")+"\n*মৌজা:* "+(d.get("mouza")||"দেওয়া হয়নি")+"\n*দাগ:* "+(d.get("dag")||"দেওয়া হয়নি")+"\n*খতিয়ান:* "+(d.get("khatian")||"দেওয়া হয়নি")+"\n\n*বিস্তারিত:*\n"+d.get("details");window.open("https://wa.me/"+BB_CONFIG.whatsapp+"?text="+encodeURIComponent(t),"_blank");};
-const box=document.getElementById("galleryLightbox"),im=document.getElementById("lightboxImage"),ti=document.getElementById("lightboxTitle");document.querySelectorAll(".gallery-item").forEach(x=>x.onclick=()=>{im.src=x.dataset.image;ti.textContent=x.dataset.title;box.classList.add("open")});document.querySelector(".gallery-close").onclick=()=>box.classList.remove("open");box.onclick=e=>{if(e.target===box)box.classList.remove("open")};
-});
-</script>
+            <p class="eyebrow green">
+                আমাদের পরিষেবা
+            </p>
+
+            <h2>
+                জমি ও সম্পত্তির কাজে এক জায়গায় সহায়তা
+            </h2>
+
+            <p>
+                আপনার প্রয়োজন অনুযায়ী জমি ও সম্পত্তি
+                সংক্রান্ত বিভিন্ন কাজে সহযোগিতা।
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="card service-card">
+
+                <div class="icon">
+                    01
+                </div>
+
+                <h3>
+                    জমি রেজিস্ট্রেশন
+                </h3>
+
+                <p>
+                    জমি ক্রয়-বিক্রয় এবং রেজিস্ট্রেশন
+                    সংক্রান্ত প্রয়োজনীয় কাজ ও প্রক্রিয়া
+                    সম্পর্কে সহায়তা।
+                </p>
+
+            </div>
+
+
+
+            <div class="card service-card">
+
+                <div class="icon blue">
+                    02
+                </div>
+
+                <h3>
+                    দলিল সংক্রান্ত সহায়তা
+                </h3>
+
+                <p>
+                    জমির দলিল, প্রয়োজনীয় কাগজপত্র এবং
+                    সংশ্লিষ্ট তথ্য সম্পর্কে সহায়তা।
+                </p>
+
+            </div>
+
+
+
+            <div class="card service-card">
+
+                <div class="icon">
+                    03
+                </div>
+
+                <h3>
+                    ভূমি রেকর্ড
+                </h3>
+
+                <p>
+                    খতিয়ান, দাগ, মৌজা এবং জমির রেকর্ড
+                    সংক্রান্ত তথ্য খোঁজা ও বোঝার ক্ষেত্রে
+                    সহযোগিতা।
+                </p>
+
+            </div>
+
+
+
+            <div class="card service-card">
+
+                <div class="icon blue">
+                    04
+                </div>
+
+                <h3>
+                    মিউটেশন
+                </h3>
+
+                <p>
+                    জমির নামজারি ও মিউটেশন সংক্রান্ত
+                    প্রক্রিয়া সম্পর্কে প্রয়োজনীয় সহায়তা।
+                </p>
+
+            </div>
+
+
+
+            <div class="card service-card">
+
+                <div class="icon">
+                    05
+                </div>
+
+                <h3>
+                    সম্পত্তি যাচাই
+                </h3>
+
+                <p>
+                    জমি বা সম্পত্তি সংক্রান্ত তথ্য ও
+                    নথিপত্র যাচাইয়ের প্রাথমিক সহায়তা।
+                </p>
+
+            </div>
+
+
+
+            <div class="card service-card">
+
+                <div class="icon blue">
+                    06
+                </div>
+
+                <h3>
+                    জমি কেনাবেচা সহায়তা
+                </h3>
+
+                <p>
+                    জমি কেনা বা বিক্রির আগে প্রয়োজনীয়
+                    তথ্য ও নথিপত্র সম্পর্কে সহায়তা।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
+
+<section class="section"
+         id="about">
+
+    <div class="container two-col">
+
+
+        <div class="about-visual">
+
+            <div class="document-sheet">
+
+                <div class="doc-top">
+
+                    <span>
+                        LAND RECORD
+                    </span>
+
+                    <b>
+                        ✓ VERIFIED
+                    </b>
+
+                </div>
+
+
+                <div class="doc-lines"></div>
+
+                <div class="doc-lines short"></div>
+
+
+                <div class="map-box">
+
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+
+                </div>
+
+
+                <div class="doc-lines"></div>
+
+                <div class="doc-lines short"></div>
+
+            </div>
+
+
+            <div class="pen"></div>
+
+        </div>
+
+
+
+        <div>
+
+            <p class="eyebrow green">
+                ভূমি বন্ধু সম্পর্কে
+            </p>
+
+            <h2>
+                জমির কাজকে সহজ ও পরিষ্কার করার লক্ষ্য
+            </h2>
+
+            <p>
+                ভূমি বন্ধু জমি ও সম্পত্তি সংক্রান্ত
+                বিভিন্ন কাজে সাধারণ মানুষকে প্রয়োজনীয়
+                তথ্য, প্রক্রিয়া বোঝা এবং কাজের ক্ষেত্রে
+                সহযোগিতা করার উদ্দেশ্যে তৈরি।
+            </p>
+
+            <p>
+                জমির রেকর্ড, দলিল, রেজিস্ট্রেশন,
+                মিউটেশন এবং সম্পত্তি যাচাইয়ের মতো
+                বিষয়ে সঠিক তথ্য ও প্রয়োজনীয়
+                সহায়তা পাওয়াই আমাদের লক্ষ্য।
+            </p>
+
+
+            <div class="mini-note">
+
+                গুরুত্বপূর্ণ জমি সংক্রান্ত সিদ্ধান্ত নেওয়ার
+                আগে প্রয়োজনীয় নথি ও তথ্য যাচাই করুন।
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+     ===================================================== -->
+
+<section class="section why"
+         id="why">
+
+    <div class="container two-col">
+
+
+        <div class="why-panel">
+
+            <div class="seal">
+                BB
+            </div>
+
+            <h3>
+                কেন ভূমি বন্ধু?
+            </h3>
+
+            <p>
+                জমি ও সম্পত্তি সংক্রান্ত বিষয়কে
+                সহজভাবে বোঝা এবং প্রয়োজনীয়
+                সহায়তা পাওয়ার জন্য একটি
+                নির্ভরযোগ্য প্ল্যাটফর্ম।
+            </p>
+
+
+            <div class="stat-row">
+
+                <div>
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <span>
+                        সহজ প্রক্রিয়া
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        স্বচ্ছ তথ্য
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <span>
+                        দ্রুত যোগাযোগ
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div>
+
+            <p class="eyebrow green">
+                আমাদের অঙ্গীকার
+            </p>
+
+            <h2>
+                পরিষ্কার তথ্য ও দায়িত্বশীল সহযোগিতা
+            </h2>
+
+
+            <ul class="check-list">
+
+                <li>
+
+                    <span>✓</span>
+
+                    জমি সংক্রান্ত তথ্য সহজভাবে বোঝানো
+
+                </li>
+
+
+                <li>
+
+                    <span>✓</span>
+
+                    প্রয়োজনীয় নথিপত্র সম্পর্কে নির্দেশনা
+
+                </li>
+
+
+                <li>
+
+                    <span>✓</span>
+
+                    রেজিস্ট্রেশন ও রেকর্ড সংক্রান্ত সহায়তা
+
+                </li>
+
+
+                <li>
+
+                    <span>✓</span>
+
+                    WhatsApp-এর মাধ্যমে সহজ যোগাযোগ
+
+                </li>
+
+
+                <li>
+
+                    <span>✓</span>
+
+                    প্রতিটি কুয়েরি গুরুত্ব সহকারে বিবেচনা
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESS
+     ===================================================== -->
+
+<section class="section"
+         id="process">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <p class="eyebrow green">
+                কীভাবে কাজ করে
+            </p>
+
+            <h2>
+                মাত্র কয়েকটি সহজ ধাপে
+            </h2>
+
+            <p>
+                আপনার জমি বা সম্পত্তি সংক্রান্ত
+                বিষয়টি আমাদের জানান।
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <b>01</b>
+
+                <h3>
+                    কুয়েরি পাঠান
+                </h3>
+
+                <p>
+                    অনলাইন ফর্ম পূরণ করে আপনার
+                    সমস্যার বিস্তারিত জানান।
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <b>02</b>
+
+                <h3>
+                    তথ্য দিন
+                </h3>
+
+                <p>
+                    জেলা, মৌজা, দাগ, খতিয়ান এবং
+                    প্রয়োজনীয় তথ্য প্রদান করুন।
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <b>03</b>
+
+                <h3>
+                    আলোচনা
+                </h3>
+
+                <p>
+                    WhatsApp-এর মাধ্যমে আপনার
+                    বিষয়টি নিয়ে আলোচনা করুন।
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <b>04</b>
+
+                <h3>
+                    প্রয়োজনীয় সহায়তা
+                </h3>
+
+                <p>
+                    আপনার প্রয়োজন অনুযায়ী
+                    পরবর্তী পদক্ষেপ সম্পর্কে জানুন।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+     ===================================================== -->
+
+<section class="section gallery-section"
+         id="gallery">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <p class="eyebrow green">
+                গ্যালারি
+            </p>
+
+            <h2>
+                জমি ও সম্পত্তি সংক্রান্ত কাজ
+            </h2>
+
+            <p>
+                আমাদের পরিষেবার বিভিন্ন ক্ষেত্রের
+                কিছু উদাহরণ।
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item"
+                 data-image="gallery/land.svg"
+                 data-title="জমি ও সম্পত্তি">
+
+                <img src="gallery/land.svg"
+                     alt="জমি ও সম্পত্তি"
+                     loading="lazy">
+
+                <div class="gallery-caption">
+                    জমি ও সম্পত্তি
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item"
+                 data-image="gallery/registry.svg"
+                 data-title="রেজিস্ট্রেশন ও দলিল">
+
+                <img src="gallery/registry.svg"
+                     alt="রেজিস্ট্রেশন ও দলিল"
+                     loading="lazy">
+
+                <div class="gallery-caption">
+                    রেজিস্ট্রেশন ও দলিল
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item"
+                 data-image="gallery/records.svg"
+                 data-title="ভূমি রেকর্ড">
+
+                <img src="gallery/records.svg"
+                     alt="ভূমি রেকর্ড"
+                     loading="lazy">
+
+                <div class="gallery-caption">
+                    ভূমি রেকর্ড
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item"
+                 data-image="gallery/property.svg"
+                 data-title="সম্পত্তি যাচাই">
+
+                <img src="gallery/property.svg"
+                     alt="সম্পত্তি যাচাই"
+                     loading="lazy">
+
+                <div class="gallery-caption">
+                    সম্পত্তি যাচাই
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY LIGHTBOX
+     ===================================================== -->
+
+<div id="galleryLightbox"
+     class="gallery-lightbox"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Gallery Image">
+
+    <div class="lightbox-content">
+
+        <button
+            type="button"
+            class="gallery-close"
+            aria-label="Close">
+
+            ×
+
+        </button>
+
+
+        <img id="lightboxImage"
+             src=""
+             alt="">
+
+
+        <div id="lightboxTitle"
+             class="lightbox-title">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    আপনার জমির বিষয়ে জানতে চান?
+                </h2>
+
+                <p>
+                    আপনার তথ্য দিয়ে কুয়েরি পাঠান।
+                </p>
+
+            </div>
+
+
+            <a href="#query"
+               class="btn btn-light">
+
+                কুয়েরি পাঠান →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUERY FORM
+     ===================================================== -->
+
+<section class="query-section"
+         id="query">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <p class="eyebrow green">
+                অনলাইন কুয়েরি
+            </p>
+
+            <h2>
+                আপনার জমির বিষয়ে জানতে চান?
+            </h2>
+
+            <p>
+                নিচের ফর্মটি পূরণ করে WhatsApp-এর
+                মাধ্যমে আপনার কুয়েরি পাঠান।
+            </p>
+
+        </div>
+
+
+        <form id="queryForm"
+              class="query-form">
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        নাম *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="আপনার নাম"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="mobile">
+                        মোবাইল নম্বর *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        placeholder="১০ সংখ্যার মোবাইল নম্বর"
+                        maxlength="10"
+                        inputmode="numeric"
+                        autocomplete="tel"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="service">
+                        পরিষেবা *
+                    </label>
+
+                    <select
+                        id="service"
+                        name="service"
+                        required>
+
+                        <option value="">
+                            পরিষেবা নির্বাচন করুন
+                        </option>
+
+                        <option value="জমি রেজিস্ট্রেশন">
+                            জমি রেজিস্ট্রেশন
+                        </option>
+
+                        <option value="দলিল সংক্রান্ত সহায়তা">
+                            দলিল সংক্রান্ত সহায়তা
+                        </option>
+
+                        <option value="ভূমি রেকর্ড">
+                            ভূমি রেকর্ড
+                        </option>
+
+                        <option value="মিউটেশন">
+                            মিউটেশন
+                        </option>
+
+                        <option value="সম্পত্তি যাচাই">
+                            সম্পত্তি যাচাই
+                        </option>
+
+                        <option value="জমি কেনাবেচা সহায়তা">
+                            জমি কেনাবেচা সহায়তা
+                        </option>
+
+                        <option value="অন্যান্য">
+                            অন্যান্য
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="district">
+                        জেলা
+                    </label>
+
+                    <input
+                        type="text"
+                        id="district"
+                        name="district"
+                        placeholder="যেমন: বীরভূম">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="mouza">
+                        মৌজা
+                    </label>
+
+                    <input
+                        type="text"
+                        id="mouza"
+                        name="mouza"
+                        placeholder="মৌজার নাম">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="dag">
+                        দাগ নম্বর
+                    </label>
+
+                    <input
+                        type="text"
+                        id="dag"
+                        name="dag"
+                        placeholder="দাগ নম্বর">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="khatian">
+                        খতিয়ান নম্বর
+                    </label>
+
+                    <input
+                        type="text"
+                        id="khatian"
+                        name="khatian"
+                        placeholder="খতিয়ান নম্বর">
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="details">
+                    বিস্তারিত *
+                </label>
+
+                <textarea
+                    id="details"
+                    name="details"
+                    rows="6"
+                    placeholder="আপনার জমি বা সম্পত্তি সংক্রান্ত সমস্যাটি বিস্তারিত লিখুন..."
+                    required></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn query-submit">
+
+                WhatsApp-এ কুয়েরি পাঠান →
+
+            </button>
+
+
+            <p class="form-note">
+
+                Submit করলে WhatsApp খুলবে এবং
+                আপনার দেওয়া তথ্য স্বয়ংক্রিয়ভাবে
+                মেসেজে যুক্ত হবে।
+
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
+
+<section class="section contact"
+         id="contact">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <p class="eyebrow green">
+                যোগাযোগ
+            </p>
+
+            <h2>
+                ভূমি বন্ধুর সঙ্গে যোগাযোগ করুন
+            </h2>
+
+            <p>
+                আপনার জমি বা সম্পত্তি সংক্রান্ত
+                প্রশ্নের জন্য আমাদের সঙ্গে যোগাযোগ করুন।
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <a href="tel:+918370833510"
+               class="contact-card"
+               data-phone>
+
+                <span>
+                    ☎
+                </span>
+
+                <div>
+
+                    <small>
+                        ফোন
+                    </small>
+
+                    <strong>
+                        +91 8370833510
+                    </strong>
+
+                </div>
+
+            </a>
+
+
+            <a href="mailto:officework.bolpur@gmail.com"
+               class="contact-card"
+               data-email>
+
+                <span>
+                    ✉
+                </span>
+
+                <div>
+
+                    <small>
+                        ই-মেইল
+                    </small>
+
+                    <strong>
+                        officework.bolpur@gmail.com
+                    </strong>
+
+                </div>
+
+            </a>
+
+
+            <a href="#"
+               class="contact-card"
+               data-whatsapp>
+
+                <span>
+                    W
+                </span>
+
+                <div>
+
+                    <small>
+                        WhatsApp
+                    </small>
+
+                    <strong>
+                        সরাসরি যোগাযোগ করুন
+                    </strong>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div>
+
+            <img src="logo.png"
+                 alt="ভূমি বন্ধু"
+                 class="footer-logo">
+
+            <p>
+
+                জমি ও সম্পত্তি সংক্রান্ত
+                বিভিন্ন কাজে তথ্য ও
+                প্রয়োজনীয় সহায়তার জন্য
+                ভূমি বন্ধু।
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                দ্রুত লিংক
+            </h4>
+
+            <a href="#home">
+                হোম
+            </a>
+
+            <a href="#services">
+                পরিষেবা
+            </a>
+
+            <a href="#about">
+                আমাদের সম্পর্কে
+            </a>
+
+            <a href="#gallery">
+                গ্যালারি
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                পরিষেবা
+            </h4>
+
+            <a href="#services">
+                রেজিস্ট্রেশন
+            </a>
+
+            <a href="#services">
+                দলিল
+            </a>
+
+            <a href="#services">
+                ভূমি রেকর্ড
+            </a>
+
+            <a href="#services">
+                মিউটেশন
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                যোগাযোগ
+            </h4>
+
+            <a href="tel:+918370833510">
+                +91 8370833510
+            </a>
+
+            <a href="mailto:officework.bolpur@gmail.com">
+                officework.bolpur@gmail.com
+            </a>
+
+            <a href="#query">
+                অনলাইন কুয়েরি
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <span>
+
+                © <span id="year"></span>
+                Bhumi Bandhu. All Rights Reserved.
+
+            </span>
+
+            <span>
+                Land & Property Assistance
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="script.js"></script>
+
 </body>
 </html>
