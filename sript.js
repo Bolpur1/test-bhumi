@@ -1,826 +1,1103 @@
-document.addEventListener("DOMContentLoaded", function () {
+```javascript
+/* =========================================================
+   BHUMI BANDHU
+   MAIN JAVASCRIPT
+========================================================= */
+
+"use strict";
 
 
-    /* =====================================================
-       BHUMI BANDHU CONFIGURATION
-       ===================================================== */
+/* =========================================================
+   SELECT ELEMENTS
+========================================================= */
 
-    const WHATSAPP_NUMBER = "918370833510";
+const body = document.body;
 
-    const PHONE_NUMBER = "+918370833510";
+const header = document.getElementById("header");
 
-    const EMAIL_ADDRESS = "officework.bolpur@gmail.com";
+const navbar = document.getElementById("navbar");
+const menuToggle = document.getElementById("menuToggle");
 
+const themeToggle = document.getElementById("themeToggle");
 
-    /* =====================================================
-       WHATSAPP BUTTONS
-       ===================================================== */
+const backToTop = document.getElementById("backToTop");
 
-    const whatsappButtons =
-        document.querySelectorAll(
-            "[data-wa], [data-whatsapp]"
-        );
+const enquiryForm = document.getElementById("enquiryForm");
 
+const toast = document.getElementById("toast");
+const toastMessage = document.getElementById("toastMessage");
+const closeToast = document.getElementById("closeToast");
 
-    whatsappButtons.forEach(function (button) {
-
-        button.addEventListener(
-            "click",
-            function (event) {
-
-                event.preventDefault();
-
-                const message =
-                    "নমস্কার, আমি ভূমি বন্ধু-এর পরিষেবা সম্পর্কে জানতে চাই।";
+const currentYear = document.getElementById("currentYear");
 
 
-                const url =
-                    "https://wa.me/" +
-                    WHATSAPP_NUMBER +
-                    "?text=" +
-                    encodeURIComponent(message);
+/* =========================================================
+   CURRENT YEAR
+========================================================= */
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
 
 
-                window.open(
-                    url,
-                    "_blank",
-                    "noopener,noreferrer"
-                );
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
 
-            }
-        );
+if (menuToggle && navbar) {
+
+    menuToggle.addEventListener("click", function () {
+
+        navbar.classList.toggle("open");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (navbar.classList.contains("open")) {
+
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close menu"
+            );
+
+        } else {
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+        }
 
     });
 
 
-    /* =====================================================
-       MOBILE MENU
-       ===================================================== */
+    /* Close mobile menu after clicking a link */
 
-    const menuToggle =
-        document.querySelector(".menu-toggle");
+    const navLinks = navbar.querySelectorAll("a");
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navbar.classList.remove("open");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (icon) {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+        });
+
+    });
+
+}
 
 
-    const navigation =
-        document.querySelector(".nav");
+/* =========================================================
+   CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+========================================================= */
 
+document.addEventListener("click", function (event) {
 
-    if (menuToggle && navigation) {
+    if (!navbar || !menuToggle) {
+        return;
+    }
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+    const clickedInsideMenu =
+        navbar.contains(event.target);
 
+    const clickedMenuButton =
+        menuToggle.contains(event.target);
+
+    if (
+        !clickedInsideMenu &&
+        !clickedMenuButton &&
+        navbar.classList.contains("open")
+    ) {
+
+        navbar.classList.remove("open");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (icon) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
 
         menuToggle.setAttribute(
             "aria-label",
-            "মেনু খুলুন"
+            "Open menu"
+        );
+    }
+
+});
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+const savedTheme =
+    localStorage.getItem("bhumiBandhuTheme");
+
+if (savedTheme === "dark") {
+
+    body.classList.add("dark-mode");
+
+}
+
+
+function updateThemeIcon() {
+
+    if (!themeToggle) {
+        return;
+    }
+
+    const icon =
+        themeToggle.querySelector("i");
+
+    if (!icon) {
+        return;
+    }
+
+    if (body.classList.contains("dark-mode")) {
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+        themeToggle.setAttribute(
+            "aria-label",
+            "Switch to light mode"
         );
 
+    } else {
 
-        /* OPEN / CLOSE MENU */
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
 
-        menuToggle.addEventListener(
-            "click",
-            function (event) {
-
-                event.preventDefault();
-
-                event.stopPropagation();
-
-
-                const isOpen =
-                    navigation.classList.toggle(
-                        "open"
-                    );
+        themeToggle.setAttribute(
+            "aria-label",
+            "Switch to dark mode"
+        );
+    }
+}
 
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    isOpen
-                        ? "true"
-                        : "false"
-                );
+updateThemeIcon();
 
 
-                menuToggle.setAttribute(
-                    "aria-label",
-                    isOpen
-                        ? "মেনু বন্ধ করুন"
-                        : "মেনু খুলুন"
-                );
+if (themeToggle) {
 
-            }
+    themeToggle.addEventListener("click", function () {
+
+        body.classList.toggle("dark-mode");
+
+        const currentTheme =
+            body.classList.contains("dark-mode")
+                ? "dark"
+                : "light";
+
+        localStorage.setItem(
+            "bhumiBandhuTheme",
+            currentTheme
         );
 
+        updateThemeIcon();
 
-        /* CLOSE MENU AFTER CLICKING NAV LINK */
+    });
 
-        navigation
-            .querySelectorAll("a")
-            .forEach(function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        navigation.classList.remove(
-                            "open"
-                        );
+}
 
 
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
+/* =========================================================
+   HEADER SCROLL EFFECT
+========================================================= */
 
+function handleHeaderScroll() {
 
-                        menuToggle.setAttribute(
-                            "aria-label",
-                            "মেনু খুলুন"
-                        );
+    if (!header) {
+        return;
+    }
 
-                    }
-                );
+    if (window.scrollY > 30) {
 
-            });
+        header.classList.add("scrolled");
 
+    } else {
 
-        /* CLOSE MENU WHEN CLICKING OUTSIDE */
-
-        document.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    navigation.classList.contains("open") &&
-                    !navigation.contains(event.target) &&
-                    !menuToggle.contains(event.target)
-                ) {
-
-                    navigation.classList.remove(
-                        "open"
-                    );
-
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "মেনু খুলুন"
-                    );
-
-                }
-
-            }
-        );
+        header.classList.remove("scrolled");
 
     }
 
+}
 
-    /* =====================================================
-       PHONE
-       ===================================================== */
+window.addEventListener(
+    "scroll",
+    handleHeaderScroll,
+    { passive: true }
+);
 
-    document
-        .querySelectorAll("[data-phone]")
-        .forEach(function (link) {
-
-            link.href =
-                "tel:" + PHONE_NUMBER;
+handleHeaderScroll();
 
 
-            const phoneText =
-                link.querySelector(
-                    "[data-phone-text]"
-                );
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+function handleBackToTop() {
+
+    if (!backToTop) {
+        return;
+    }
+
+    if (window.scrollY > 500) {
+
+        backToTop.classList.add("show");
+
+    } else {
+
+        backToTop.classList.remove("show");
+
+    }
+
+}
+
+window.addEventListener(
+    "scroll",
+    handleBackToTop,
+    { passive: true }
+);
 
 
-            if (phoneText) {
+if (backToTop) {
 
-                phoneText.textContent =
-                    "+91 8370833510";
+    backToTop.addEventListener("click", function () {
 
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+    document.querySelectorAll("main section[id]");
+
+const navigationLinks =
+    document.querySelectorAll(".nav-link");
+
+
+function updateActiveNavigation() {
+
+    let currentSection = "";
+
+    const scrollPosition =
+        window.scrollY + 160;
+
+
+    sections.forEach(function (section) {
+
+        const sectionTop =
+            section.offsetTop;
+
+        const sectionHeight =
+            section.offsetHeight;
+
+        if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+        ) {
+
+            currentSection =
+                section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navigationLinks.forEach(function (link) {
+
+        link.classList.remove("active");
+
+        const target =
+            link.getAttribute("href");
+
+        if (
+            target === "#" + currentSection
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    { passive: true }
+);
+
+window.addEventListener(
+    "resize",
+    updateActiveNavigation
+);
+
+updateActiveNavigation();
+
+
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
+
+const faqItems =
+    document.querySelectorAll(".faq-item");
+
+
+faqItems.forEach(function (item) {
+
+    const question =
+        item.querySelector(".faq-question");
+
+    const answer =
+        item.querySelector(".faq-answer");
+
+
+    if (!question || !answer) {
+        return;
+    }
+
+
+    question.addEventListener("click", function () {
+
+        const isCurrentlyOpen =
+            item.classList.contains("active");
+
+
+        /* Close all FAQ items */
+
+        faqItems.forEach(function (otherItem) {
+
+            otherItem.classList.remove("active");
+
+            const otherAnswer =
+                otherItem.querySelector(".faq-answer");
+
+            if (otherAnswer) {
+                otherAnswer.style.maxHeight = null;
             }
 
         });
 
 
-    /* =====================================================
-       EMAIL
-       ===================================================== */
+        /* Open clicked item */
 
-    document
-        .querySelectorAll("[data-email]")
-        .forEach(function (link) {
+        if (!isCurrentlyOpen) {
 
-            link.href =
-                "mailto:" + EMAIL_ADDRESS;
+            item.classList.add("active");
+
+            answer.style.maxHeight =
+                answer.scrollHeight + "px";
+
+        }
+
+    });
+
+});
 
 
-            const emailText =
-                link.querySelector(
-                    "[data-email-text]"
+/* =========================================================
+   TOAST NOTIFICATION
+========================================================= */
+
+let toastTimer = null;
+
+
+function showToast(message) {
+
+    if (!toast) {
+        return;
+    }
+
+    if (toastMessage) {
+        toastMessage.textContent = message;
+    }
+
+    toast.classList.add("show");
+
+
+    clearTimeout(toastTimer);
+
+
+    toastTimer = setTimeout(function () {
+
+        toast.classList.remove("show");
+
+    }, 5000);
+
+}
+
+
+function hideToast() {
+
+    if (!toast) {
+        return;
+    }
+
+    toast.classList.remove("show");
+
+    clearTimeout(toastTimer);
+
+}
+
+
+if (closeToast) {
+
+    closeToast.addEventListener(
+        "click",
+        hideToast
+    );
+
+}
+
+
+/* =========================================================
+   ENQUIRY FORM
+========================================================= */
+
+if (enquiryForm) {
+
+    enquiryForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("name")?.value.trim();
+
+            const phone =
+                document.getElementById("phone")?.value.trim();
+
+            const service =
+                document.getElementById("service")?.value.trim();
+
+            const location =
+                document.getElementById("location")?.value.trim();
+
+            const message =
+                document.getElementById("message")?.value.trim();
+
+
+            /* Basic validation */
+
+            if (!name) {
+
+                showToast(
+                    "Please enter your full name."
                 );
 
+                document.getElementById("name")?.focus();
 
-            if (emailText) {
-
-                emailText.textContent =
-                    EMAIL_ADDRESS;
-
+                return;
             }
 
-        });
+
+            if (!phone) {
+
+                showToast(
+                    "Please enter your mobile number."
+                );
+
+                document.getElementById("phone")?.focus();
+
+                return;
+            }
 
 
-    /* =====================================================
-       GALLERY LIGHTBOX
-       ===================================================== */
+            /*
+               Indian mobile number validation.
 
-    const galleryItems =
-        document.querySelectorAll(
-            ".gallery-item"
-        );
+               Accepts:
+               10 digit numbers beginning with 6-9
+               Optional +91 or 91 prefix
+            */
 
-
-    const galleryLightbox =
-        document.getElementById(
-            "galleryLightbox"
-        );
+            const cleanPhone =
+                phone.replace(/\s+/g, "")
+                     .replace(/-/g, "");
 
 
-    const lightboxImage =
-        document.getElementById(
-            "lightboxImage"
-        );
+            const phonePattern =
+                /^(?:\+91|91)?[6-9]\d{9}$/;
 
 
-    const lightboxTitle =
-        document.getElementById(
-            "lightboxTitle"
-        );
+            if (!phonePattern.test(cleanPhone)) {
+
+                showToast(
+                    "Please enter a valid Indian mobile number."
+                );
+
+                document.getElementById("phone")?.focus();
+
+                return;
+            }
 
 
-    const galleryClose =
-        document.querySelector(
-            ".gallery-close"
-        );
+            if (!service) {
+
+                showToast(
+                    "Please select a service."
+                );
+
+                document.getElementById("service")?.focus();
+
+                return;
+            }
 
 
-    /* OPEN GALLERY */
+            if (!message) {
 
-    galleryItems.forEach(
-        function (item) {
+                showToast(
+                    "Please describe your requirement."
+                );
 
-            item.addEventListener(
-                "click",
-                function () {
+                document.getElementById("message")?.focus();
 
-                    if (!galleryLightbox) {
-                        return;
-                    }
+                return;
+            }
 
 
-                    const image =
-                        item.getAttribute(
-                            "data-image"
-                        );
+            /*
+               At this stage the form is validated.
+
+               No backend/database is connected yet.
+               We show a confirmation message.
+            */
 
 
-                    const title =
-                        item.getAttribute(
-                            "data-title"
-                        ) || "";
-
-
-                    if (
-                        lightboxImage &&
-                        image
-                    ) {
-
-                        lightboxImage.src =
-                            image;
-
-                        lightboxImage.alt =
-                            title;
-
-                    }
-
-
-                    if (lightboxTitle) {
-
-                        lightboxTitle.textContent =
-                            title;
-
-                    }
-
-
-                    galleryLightbox.classList.add(
-                        "open"
-                    );
-
-
-                    document.body.style.overflow =
-                        "hidden";
-
-                }
+            showToast(
+                "Your enquiry has been received successfully."
             );
+
+
+            /* Store latest enquiry locally */
+
+            const enquiryData = {
+
+                name: name,
+
+                phone: phone,
+
+                service: service,
+
+                location: location,
+
+                message: message,
+
+                submittedAt:
+                    new Date().toISOString()
+
+            };
+
+
+            try {
+
+                localStorage.setItem(
+                    "bhumiBandhuLatestEnquiry",
+                    JSON.stringify(enquiryData)
+                );
+
+            } catch (error) {
+
+                console.warn(
+                    "Local storage is unavailable.",
+                    error
+                );
+
+            }
+
+
+            /* Reset form */
+
+            enquiryForm.reset();
 
         }
     );
 
+}
 
-    /* CLOSE GALLERY */
 
-    function closeGallery() {
+/* =========================================================
+   COUNTER ANIMATION
+========================================================= */
 
-        if (!galleryLightbox) {
+const counters =
+    document.querySelectorAll(".counter");
+
+
+function animateCounter(counter) {
+
+    const target =
+        Number(counter.getAttribute("data-target"));
+
+    if (
+        Number.isNaN(target) ||
+        target <= 0
+    ) {
+        return;
+    }
+
+
+    let current = 0;
+
+    const duration = 1300;
+
+    const startTime = performance.now();
+
+
+    function updateCounter(currentTime) {
+
+        const elapsed =
+            currentTime - startTime;
+
+        const progress =
+            Math.min(elapsed / duration, 1);
+
+
+        /*
+           Ease-out animation
+        */
+
+        const easedProgress =
+            1 - Math.pow(1 - progress, 3);
+
+
+        current =
+            Math.floor(target * easedProgress);
+
+
+        counter.textContent = current;
+
+
+        if (progress < 1) {
+
+            requestAnimationFrame(
+                updateCounter
+            );
+
+        } else {
+
+            counter.textContent = target;
+
+        }
+
+    }
+
+
+    requestAnimationFrame(
+        updateCounter
+    );
+
+}
+
+
+/* Observe counters only when visible */
+
+if (
+    counters.length > 0 &&
+    "IntersectionObserver" in window
+) {
+
+    const counterObserver =
+        new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        animateCounter(
+                            entry.target
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.5
+            }
+        );
+
+
+    counters.forEach(function (counter) {
+
+        counterObserver.observe(counter);
+
+    });
+
+} else {
+
+    counters.forEach(function (counter) {
+
+        const target =
+            counter.getAttribute("data-target");
+
+        counter.textContent =
+            target || "0";
+
+    });
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".service-card, " +
+        ".process-item, " +
+        ".contact-card, " +
+        ".stat-card, " +
+        ".about-feature, " +
+        ".why-item, " +
+        ".faq-item"
+    );
+
+
+revealElements.forEach(function (element) {
+
+    element.classList.add("reveal");
+
+});
+
+
+if (
+    revealElements.length > 0 &&
+    "IntersectionObserver" in window
+) {
+
+    const revealObserver =
+        new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealElements.forEach(function (element) {
+
+        revealObserver.observe(element);
+
+    });
+
+} else {
+
+    revealElements.forEach(function (element) {
+
+        element.classList.add("visible");
+
+    });
+
+}
+
+
+/* =========================================================
+   SERVICE LINKS
+========================================================= */
+
+const serviceLinks =
+    document.querySelectorAll(
+        ".service-link"
+    );
+
+
+serviceLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        const enquirySection =
+            document.getElementById("enquiry");
+
+
+        if (enquirySection) {
+
+            setTimeout(function () {
+
+                const serviceSelect =
+                    document.getElementById("service");
+
+                if (serviceSelect) {
+
+                    serviceSelect.focus();
+
+                }
+
+            }, 600);
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   PHONE INPUT
+========================================================= */
+
+const phoneInput =
+    document.getElementById("phone");
+
+
+if (phoneInput) {
+
+    phoneInput.addEventListener(
+        "input",
+        function () {
+
+            /*
+               Keep common phone characters only.
+            */
+
+            this.value =
+                this.value.replace(
+                    /[^0-9+\-\s]/g,
+                    ""
+                );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SMOOTH INTERNAL LINKS
+========================================================= */
+
+const internalLinks =
+    document.querySelectorAll(
+        'a[href^="#"]'
+    );
+
+
+internalLinks.forEach(function (link) {
+
+    link.addEventListener(
+        "click",
+        function (event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (!target) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (event.key !== "Escape") {
             return;
         }
 
 
-        galleryLightbox.classList.remove(
-            "open"
-        );
+        /* Close mobile menu */
+
+        if (
+            navbar &&
+            navbar.classList.contains("open")
+        ) {
+
+            navbar.classList.remove("open");
 
 
-        document.body.style.overflow =
-            "";
+            if (menuToggle) {
 
+                const icon =
+                    menuToggle.querySelector("i");
 
-        if (lightboxImage) {
+                if (icon) {
 
-            lightboxImage.src =
-                "";
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
 
-        }
-
-    }
-
-
-    /* CLOSE BUTTON */
-
-    if (galleryClose) {
-
-        galleryClose.addEventListener(
-            "click",
-            closeGallery
-        );
-
-    }
-
-
-    /* CLOSE BY CLICKING BACKGROUND */
-
-    if (galleryLightbox) {
-
-        galleryLightbox.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target ===
-                    galleryLightbox
-                ) {
-
-                    closeGallery();
+                    icon.classList.add(
+                        "fa-bars"
+                    );
 
                 }
-
-            }
-        );
-
-    }
-
-
-    /* CLOSE WITH ESC KEY */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                event.key ===
-                "Escape"
-            ) {
-
-                closeGallery();
 
             }
 
         }
-    );
 
 
-    /* =====================================================
-       QUERY FORM
-       ===================================================== */
+        /* Close toast */
 
-    const queryForm =
-        document.getElementById(
-            "queryForm"
-        );
+        hideToast();
 
 
-    if (queryForm) {
+        /* Close FAQ */
 
-        queryForm.addEventListener(
-            "submit",
-            function (event) {
+        faqItems.forEach(function (item) {
 
-                event.preventDefault();
+            item.classList.remove("active");
 
+            const answer =
+                item.querySelector(".faq-answer");
 
-                /* GET VALUES */
+            if (answer) {
 
-                const name =
-                    document
-                        .getElementById("name")
-                        ?.value
-                        .trim() || "";
-
-
-                const mobile =
-                    document
-                        .getElementById("mobile")
-                        ?.value
-                        .trim() || "";
-
-
-                const service =
-                    document
-                        .getElementById("service")
-                        ?.value
-                        .trim() || "";
-
-
-                const district =
-                    document
-                        .getElementById("district")
-                        ?.value
-                        .trim() || "";
-
-
-                const mouza =
-                    document
-                        .getElementById("mouza")
-                        ?.value
-                        .trim() || "";
-
-
-                const dag =
-                    document
-                        .getElementById("dag")
-                        ?.value
-                        .trim() || "";
-
-
-                const khatian =
-                    document
-                        .getElementById("khatian")
-                        ?.value
-                        .trim() || "";
-
-
-                const details =
-                    document
-                        .getElementById("details")
-                        ?.value
-                        .trim() || "";
-
-
-                /* =================================================
-                   VALIDATION
-                   ================================================= */
-
-
-                if (!name) {
-
-                    alert(
-                        "দয়া করে আপনার নাম লিখুন।"
-                    );
-
-
-                    document
-                        .getElementById("name")
-                        ?.focus();
-
-
-                    return;
-
-                }
-
-
-                if (
-                    !/^[0-9]{10}$/.test(
-                        mobile
-                    )
-                ) {
-
-                    alert(
-                        "দয়া করে সঠিক ১০ সংখ্যার মোবাইল নম্বর দিন।"
-                    );
-
-
-                    document
-                        .getElementById("mobile")
-                        ?.focus();
-
-
-                    return;
-
-                }
-
-
-                if (!service) {
-
-                    alert(
-                        "দয়া করে একটি পরিষেবা নির্বাচন করুন।"
-                    );
-
-
-                    document
-                        .getElementById("service")
-                        ?.focus();
-
-
-                    return;
-
-                }
-
-
-                if (!details) {
-
-                    alert(
-                        "দয়া করে আপনার সমস্যাটি বিস্তারিত লিখুন।"
-                    );
-
-
-                    document
-                        .getElementById("details")
-                        ?.focus();
-
-
-                    return;
-
-                }
-
-
-                /* =================================================
-                   CREATE WHATSAPP MESSAGE
-                   ================================================= */
-
-
-                let message =
-                    "নমস্কার, আমি ভূমি বন্ধু-তে একটি কুয়েরি পাঠাতে চাই।\n\n";
-
-
-                message +=
-                    "━━━━━━━━━━━━━━━━━━\n";
-
-
-                message +=
-                    "ভূমি বন্ধু - অনলাইন কুয়েরি\n";
-
-
-                message +=
-                    "━━━━━━━━━━━━━━━━━━\n\n";
-
-
-                message +=
-                    "নাম: " +
-                    name +
-                    "\n";
-
-
-                message +=
-                    "মোবাইল: " +
-                    mobile +
-                    "\n";
-
-
-                message +=
-                    "পরিষেবা: " +
-                    service +
-                    "\n";
-
-
-                if (district) {
-
-                    message +=
-                        "জেলা: " +
-                        district +
-                        "\n";
-
-                }
-
-
-                if (mouza) {
-
-                    message +=
-                        "মৌজা: " +
-                        mouza +
-                        "\n";
-
-                }
-
-
-                if (dag) {
-
-                    message +=
-                        "দাগ নম্বর: " +
-                        dag +
-                        "\n";
-
-                }
-
-
-                if (khatian) {
-
-                    message +=
-                        "খতিয়ান নম্বর: " +
-                        khatian +
-                        "\n";
-
-                }
-
-
-                message +=
-                    "\nবিস্তারিত:\n" +
-                    details +
-                    "\n\n";
-
-
-                message +=
-                    "ধন্যবাদ।";
-
-
-                /* =================================================
-                   OPEN WHATSAPP
-                   ================================================= */
-
-                const whatsappURL =
-                    "https://wa.me/" +
-                    WHATSAPP_NUMBER +
-                    "?text=" +
-                    encodeURIComponent(
-                        message
-                    );
-
-
-                window.open(
-                    whatsappURL,
-                    "_blank",
-                    "noopener,noreferrer"
-                );
+                answer.style.maxHeight = null;
 
             }
-        );
+
+        });
 
     }
+);
 
 
-    /* =====================================================
-       MOBILE NUMBER INPUT
-       ONLY NUMBERS + MAX 10 DIGITS
-       ===================================================== */
+/* =========================================================
+   WINDOW RESIZE
+========================================================= */
 
-    const mobileInput =
-        document.getElementById(
-            "mobile"
-        );
+window.addEventListener(
+    "resize",
+    function () {
 
+        /*
+           If an FAQ is open, recalculate its
+           height after resizing the window.
+        */
 
-    if (mobileInput) {
-
-        mobileInput.addEventListener(
-            "input",
-            function () {
-
-                this.value =
-                    this.value
-                        .replace(/\D/g, "")
-                        .slice(0, 10);
-
-            }
-        );
-
-    }
+        const activeFaq =
+            document.querySelector(
+                ".faq-item.active"
+            );
 
 
-    /* =====================================================
-       ACTIVE NAVIGATION
-       ===================================================== */
+        if (activeFaq) {
 
-    const sections =
-        document.querySelectorAll(
-            "section[id]"
-        );
-
-
-    const navLinks =
-        document.querySelectorAll(
-            'header nav a[href^="#"]:not([data-wa]):not([data-whatsapp])'
-        );
-
-
-    function updateActiveNavigation() {
-
-        let current = "";
-
-
-        const position =
-            window.scrollY + 120;
-
-
-        sections.forEach(
-            function (section) {
-
-                if (
-                    position >=
-                    section.offsetTop &&
-
-                    position <
-                    section.offsetTop +
-                    section.offsetHeight
-                ) {
-
-                    current =
-                        section.id;
-
-                }
-
-            }
-        );
-
-
-        navLinks.forEach(
-            function (link) {
-
-                link.classList.remove(
-                    "active"
+            const answer =
+                activeFaq.querySelector(
+                    ".faq-answer"
                 );
 
 
-                if (
-                    link.getAttribute(
-                        "href"
-                    ) ===
-                    "#" + current
-                ) {
+            if (answer) {
 
-                    link.classList.add(
-                        "active"
-                    );
-
-                }
+                answer.style.maxHeight =
+                    answer.scrollHeight + "px";
 
             }
-        );
+
+        }
 
     }
+);
 
 
-    if (
-        sections.length &&
-        navLinks.length
-    ) {
+/* =========================================================
+   PAGE LOADED
+========================================================= */
 
-        window.addEventListener(
-            "scroll",
-            updateActiveNavigation,
-            {
-                passive: true
-            }
-        );
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-
+        updateThemeIcon();
+        handleHeaderScroll();
+        handleBackToTop();
         updateActiveNavigation();
 
     }
-
-
-    /* =====================================================
-       FOOTER YEAR
-       ===================================================== */
-
-    const yearElement =
-        document.getElementById(
-            "year"
-        );
-
-
-    if (yearElement) {
-
-        yearElement.textContent =
-            new Date().getFullYear();
-
-    }
-
-});
+);
+```
